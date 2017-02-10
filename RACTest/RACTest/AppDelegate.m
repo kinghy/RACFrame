@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 #import "MainViewController.h"
 
 @interface AppDelegate ()
@@ -17,7 +18,7 @@
 
 +(void)initialize{
     //注入RF框架，移植时需要执行此语句
-    [[RFAspectsManager sharedInstance] runWithAppDelegateClss:[self class]];
+   [[RFAspectsManager sharedInstance] runWithAppDelegateClss:[self class]]; 
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -15,9 +15,7 @@ static const int ddLogLevel = DDLogLevelVerbose;
 static const int ddLogLevel = DDLogLevelWarning;
 #endif
 
-#define kGetMethod 1
-#define kPostMethod 2
-
 #define kRepeatInfinity -1
+
 
 #endif /* RFMacro_h */

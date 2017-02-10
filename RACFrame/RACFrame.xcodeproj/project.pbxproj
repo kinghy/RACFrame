@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C2DB5B81E345C61007C3231 /* RFAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5B21E345C61007C3231 /* RFAspect.m */; };
-		7C2DB5B91E345C61007C3231 /* RFAspectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5B41E345C61007C3231 /* RFAspectsManager.m */; };
-		7C2DB5BA1E345C61007C3231 /* RFCocoaLumberjackAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5B61E345C61007C3231 /* RFCocoaLumberjackAspect.m */; };
-		7C2DB5BD1E345E25007C3231 /* RFAspectsManager+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5BC1E345E25007C3231 /* RFAspectsManager+AppDelegate.m */; };
-		7C2DB5C01E347437007C3231 /* RFAspectsManager+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5BF1E347437007C3231 /* RFAspectsManager+Controller.m */; };
-		7C2DB5D21E348558007C3231 /* UIViewController+dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5D11E348558007C3231 /* UIViewController+dealloc.m */; };
-		7C2DB5D61E349882007C3231 /* RFNetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DB5D51E349882007C3231 /* RFNetAdapter.m */; };
-		7CA5CDB21E2722B5002C14C8 /* RFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5CDB11E2722B5002C14C8 /* RFNetworking.m */; };
+		7C3663A21E45AB0C00E966C6 /* LoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3663A11E45AB0C00E966C6 /* LoginParam.m */; };
+		7C3663A51E45AC0A00E966C6 /* LoginEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3663A41E45AC0A00E966C6 /* LoginEntity.m */; };
+		7C49CB971E498F2100E8F21E /* LoginOnlineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49CB961E498F2100E8F21E /* LoginOnlineParam.m */; };
+		7C55DE3D1E4D97D100A69D8B /* RFAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE1E1E4D97D100A69D8B /* RFAspect.m */; };
+		7C55DE3E1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE201E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m */; };
+		7C55DE3F1E4D97D100A69D8B /* RFAspectsManager+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE221E4D97D100A69D8B /* RFAspectsManager+Controller.m */; };
+		7C55DE401E4D97D100A69D8B /* RFAspectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE241E4D97D100A69D8B /* RFAspectsManager.m */; };
+		7C55DE411E4D97D100A69D8B /* RFCocoaLumberjackAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE261E4D97D100A69D8B /* RFCocoaLumberjackAspect.m */; };
+		7C55DE421E4D97D100A69D8B /* RFNetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE291E4D97D100A69D8B /* RFNetAdapter.m */; };
+		7C55DE431E4D97D100A69D8B /* RFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE2B1E4D97D100A69D8B /* RFNetworking.m */; };
+		7C55DE441E4D97D100A69D8B /* RFPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE2E1E4D97D100A69D8B /* RFPersistance.m */; };
+		7C55DE451E4D97D100A69D8B /* RFPersistanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE301E4D97D100A69D8B /* RFPersistanceManager.m */; };
+		7C55DE461E4D97D100A69D8B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE331E4D97D100A69D8B /* NSString+MD5.m */; };
+		7C55DE471E4D97D100A69D8B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE351E4D97D100A69D8B /* NSString+SHA1.m */; };
+		7C55DE481E4D97D100A69D8B /* UITextField+RFKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE381E4D97D100A69D8B /* UITextField+RFKeyBoard.m */; };
+		7C55DE491E4D97D100A69D8B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE3A1E4D97D100A69D8B /* UIView+HUD.m */; };
+		7C55DE4A1E4D97D100A69D8B /* UIView+RFKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE3C1E4D97D100A69D8B /* UIView+RFKeyBoard.m */; };
+		7C8728EC1E4995D500BADA96 /* LoginSilenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8728EB1E4995D500BADA96 /* LoginSilenceParam.m */; };
+		7C8728EF1E49A38D00BADA96 /* LoginOnlineSilenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8728EE1E49A38D00BADA96 /* LoginOnlineSilenceParam.m */; };
+		7C8728F21E49A6A400BADA96 /* LoginValidParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8728F11E49A6A400BADA96 /* LoginValidParam.m */; };
+		7CBE68E01E446C9000339F73 /* TestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE68DF1E446C9000339F73 /* TestParam.m */; };
+		7CBE68E31E446FDF00339F73 /* Test2Param.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE68E21E446FDF00339F73 /* Test2Param.m */; };
+		7CBE68E61E44818F00339F73 /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE68E51E44818F00339F73 /* TestEntity.m */; };
 		7CFD0E131E274D520005259B /* RACFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0E121E274D520005259B /* RACFrameTests.m */; };
 		7CFD0E151E274D520005259B /* libRACFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA5CDA41E2722AA002C14C8 /* libRACFrame.a */; };
 		9AF918C9BC36A6290154B7E2 /* libPods-RACFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDE916AA9C6E78B0C3205A8 /* libPods-RACFrame.a */; };
@@ -43,31 +58,61 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		176E6FF956947F4B4A0F36B9 /* Pods-RACFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACFrame.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RACFrame/Pods-RACFrame.release.xcconfig"; sourceTree = "<group>"; };
-		32CEC421638159A5E1114C46 /* Pods-RACFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACFrame.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RACFrame/Pods-RACFrame.debug.xcconfig"; sourceTree = "<group>"; };
-		7C1230331E30B88E009193A6 /* RACFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACFrame.h; sourceTree = "<group>"; };
 		7C1230341E30B920009193A6 /* RACPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACPrefixHeader.pch; sourceTree = "<group>"; };
-		7C2DB5B11E345C61007C3231 /* RFAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAspect.h; sourceTree = "<group>"; };
-		7C2DB5B21E345C61007C3231 /* RFAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAspect.m; sourceTree = "<group>"; };
-		7C2DB5B31E345C61007C3231 /* RFAspectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAspectsManager.h; sourceTree = "<group>"; };
-		7C2DB5B41E345C61007C3231 /* RFAspectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAspectsManager.m; sourceTree = "<group>"; };
-		7C2DB5B51E345C61007C3231 /* RFCocoaLumberjackAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCocoaLumberjackAspect.h; sourceTree = "<group>"; };
-		7C2DB5B61E345C61007C3231 /* RFCocoaLumberjackAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCocoaLumberjackAspect.m; sourceTree = "<group>"; };
-		7C2DB5BB1E345E25007C3231 /* RFAspectsManager+AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RFAspectsManager+AppDelegate.h"; sourceTree = "<group>"; };
-		7C2DB5BC1E345E25007C3231 /* RFAspectsManager+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RFAspectsManager+AppDelegate.m"; sourceTree = "<group>"; };
-		7C2DB5BE1E347437007C3231 /* RFAspectsManager+Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RFAspectsManager+Controller.h"; sourceTree = "<group>"; };
-		7C2DB5BF1E347437007C3231 /* RFAspectsManager+Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RFAspectsManager+Controller.m"; sourceTree = "<group>"; };
-		7C2DB5D01E348558007C3231 /* UIViewController+dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+dealloc.h"; sourceTree = "<group>"; };
-		7C2DB5D11E348558007C3231 /* UIViewController+dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+dealloc.m"; sourceTree = "<group>"; };
-		7C2DB5D31E3485EC007C3231 /* RFMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFMacro.h; sourceTree = "<group>"; };
-		7C2DB5D41E349882007C3231 /* RFNetAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetAdapter.h; sourceTree = "<group>"; };
-		7C2DB5D51E349882007C3231 /* RFNetAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetAdapter.m; sourceTree = "<group>"; };
+		7C3663A01E45AB0C00E966C6 /* LoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginParam.h; sourceTree = "<group>"; };
+		7C3663A11E45AB0C00E966C6 /* LoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginParam.m; sourceTree = "<group>"; };
+		7C3663A31E45AC0A00E966C6 /* LoginEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEntity.h; sourceTree = "<group>"; };
+		7C3663A41E45AC0A00E966C6 /* LoginEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEntity.m; sourceTree = "<group>"; };
+		7C49CB951E498F2100E8F21E /* LoginOnlineParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOnlineParam.h; sourceTree = "<group>"; };
+		7C49CB961E498F2100E8F21E /* LoginOnlineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOnlineParam.m; sourceTree = "<group>"; };
+		7C55DE1A1E4D97D100A69D8B /* RACFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACFrame.h; sourceTree = "<group>"; };
+		7C55DE1B1E4D97D100A69D8B /* RFMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMacro.h; sourceTree = "<group>"; };
+		7C55DE1D1E4D97D100A69D8B /* RFAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAspect.h; sourceTree = "<group>"; };
+		7C55DE1E1E4D97D100A69D8B /* RFAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAspect.m; sourceTree = "<group>"; };
+		7C55DE1F1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RFAspectsManager+AppDelegate.h"; sourceTree = "<group>"; };
+		7C55DE201E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RFAspectsManager+AppDelegate.m"; sourceTree = "<group>"; };
+		7C55DE211E4D97D100A69D8B /* RFAspectsManager+Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RFAspectsManager+Controller.h"; sourceTree = "<group>"; };
+		7C55DE221E4D97D100A69D8B /* RFAspectsManager+Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RFAspectsManager+Controller.m"; sourceTree = "<group>"; };
+		7C55DE231E4D97D100A69D8B /* RFAspectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAspectsManager.h; sourceTree = "<group>"; };
+		7C55DE241E4D97D100A69D8B /* RFAspectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAspectsManager.m; sourceTree = "<group>"; };
+		7C55DE251E4D97D100A69D8B /* RFCocoaLumberjackAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCocoaLumberjackAspect.h; sourceTree = "<group>"; };
+		7C55DE261E4D97D100A69D8B /* RFCocoaLumberjackAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCocoaLumberjackAspect.m; sourceTree = "<group>"; };
+		7C55DE281E4D97D100A69D8B /* RFNetAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetAdapter.h; sourceTree = "<group>"; };
+		7C55DE291E4D97D100A69D8B /* RFNetAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetAdapter.m; sourceTree = "<group>"; };
+		7C55DE2A1E4D97D100A69D8B /* RFNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetWorking.h; sourceTree = "<group>"; };
+		7C55DE2B1E4D97D100A69D8B /* RFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetworking.m; sourceTree = "<group>"; };
+		7C55DE2D1E4D97D100A69D8B /* RFPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPersistance.h; sourceTree = "<group>"; };
+		7C55DE2E1E4D97D100A69D8B /* RFPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPersistance.m; sourceTree = "<group>"; };
+		7C55DE2F1E4D97D100A69D8B /* RFPersistanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPersistanceManager.h; sourceTree = "<group>"; };
+		7C55DE301E4D97D100A69D8B /* RFPersistanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPersistanceManager.m; sourceTree = "<group>"; };
+		7C55DE321E4D97D100A69D8B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		7C55DE331E4D97D100A69D8B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		7C55DE341E4D97D100A69D8B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA1.h"; sourceTree = "<group>"; };
+		7C55DE351E4D97D100A69D8B /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA1.m"; sourceTree = "<group>"; };
+		7C55DE371E4D97D100A69D8B /* UITextField+RFKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RFKeyBoard.h"; sourceTree = "<group>"; };
+		7C55DE381E4D97D100A69D8B /* UITextField+RFKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RFKeyBoard.m"; sourceTree = "<group>"; };
+		7C55DE391E4D97D100A69D8B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		7C55DE3A1E4D97D100A69D8B /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		7C55DE3B1E4D97D100A69D8B /* UIView+RFKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFKeyBoard.h"; sourceTree = "<group>"; };
+		7C55DE3C1E4D97D100A69D8B /* UIView+RFKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFKeyBoard.m"; sourceTree = "<group>"; };
+		7C8728EA1E4995D500BADA96 /* LoginSilenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSilenceParam.h; sourceTree = "<group>"; };
+		7C8728EB1E4995D500BADA96 /* LoginSilenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSilenceParam.m; sourceTree = "<group>"; };
+		7C8728ED1E49A38D00BADA96 /* LoginOnlineSilenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOnlineSilenceParam.h; sourceTree = "<group>"; };
+		7C8728EE1E49A38D00BADA96 /* LoginOnlineSilenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOnlineSilenceParam.m; sourceTree = "<group>"; };
+		7C8728F01E49A6A400BADA96 /* LoginValidParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginValidParam.h; sourceTree = "<group>"; };
+		7C8728F11E49A6A400BADA96 /* LoginValidParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginValidParam.m; sourceTree = "<group>"; };
 		7CA5CDA41E2722AA002C14C8 /* libRACFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRACFrame.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CA5CDB01E2722B5002C14C8 /* RFNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetWorking.h; sourceTree = "<group>"; };
-		7CA5CDB11E2722B5002C14C8 /* RFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetworking.m; sourceTree = "<group>"; };
+		7CBE68DE1E446C9000339F73 /* TestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParam.h; sourceTree = "<group>"; };
+		7CBE68DF1E446C9000339F73 /* TestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestParam.m; sourceTree = "<group>"; };
+		7CBE68E11E446FDF00339F73 /* Test2Param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2Param.h; sourceTree = "<group>"; };
+		7CBE68E21E446FDF00339F73 /* Test2Param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2Param.m; sourceTree = "<group>"; };
+		7CBE68E41E44818F00339F73 /* TestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntity.h; sourceTree = "<group>"; };
+		7CBE68E51E44818F00339F73 /* TestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntity.m; sourceTree = "<group>"; };
 		7CFD0E101E274D510005259B /* RACFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFD0E121E274D520005259B /* RACFrameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACFrameTests.m; sourceTree = "<group>"; };
 		7CFD0E141E274D520005259B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839AE87480F5A56412C60C1D /* Pods-RACFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACFrame.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RACFrame/Pods-RACFrame.release.xcconfig"; sourceTree = "<group>"; };
+		8820270696F94D2B32B1C5F1 /* Pods-RACFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACFrame.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RACFrame/Pods-RACFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		FBDE916AA9C6E78B0C3205A8 /* libPods-RACFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,32 +144,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7C1230321E30B877009193A6 /* Headers */ = {
+		7C55DE191E4D97D100A69D8B /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				7C1230331E30B88E009193A6 /* RACFrame.h */,
-				7C2DB5D31E3485EC007C3231 /* RFMacro.h */,
+				7C55DE1A1E4D97D100A69D8B /* RACFrame.h */,
+				7C55DE1B1E4D97D100A69D8B /* RFMacro.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		7C2DB5AE1E345C4A007C3231 /* RFAspects */ = {
+		7C55DE1C1E4D97D100A69D8B /* RFAspects */ = {
 			isa = PBXGroup;
 			children = (
-				7C2DB5B11E345C61007C3231 /* RFAspect.h */,
-				7C2DB5B21E345C61007C3231 /* RFAspect.m */,
-				7C2DB5B31E345C61007C3231 /* RFAspectsManager.h */,
-				7C2DB5B41E345C61007C3231 /* RFAspectsManager.m */,
-				7C2DB5B51E345C61007C3231 /* RFCocoaLumberjackAspect.h */,
-				7C2DB5B61E345C61007C3231 /* RFCocoaLumberjackAspect.m */,
-				7C2DB5BB1E345E25007C3231 /* RFAspectsManager+AppDelegate.h */,
-				7C2DB5BC1E345E25007C3231 /* RFAspectsManager+AppDelegate.m */,
-				7C2DB5BE1E347437007C3231 /* RFAspectsManager+Controller.h */,
-				7C2DB5BF1E347437007C3231 /* RFAspectsManager+Controller.m */,
-				7C2DB5D01E348558007C3231 /* UIViewController+dealloc.h */,
-				7C2DB5D11E348558007C3231 /* UIViewController+dealloc.m */,
+				7C55DE1D1E4D97D100A69D8B /* RFAspect.h */,
+				7C55DE1E1E4D97D100A69D8B /* RFAspect.m */,
+				7C55DE1F1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.h */,
+				7C55DE201E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m */,
+				7C55DE211E4D97D100A69D8B /* RFAspectsManager+Controller.h */,
+				7C55DE221E4D97D100A69D8B /* RFAspectsManager+Controller.m */,
+				7C55DE231E4D97D100A69D8B /* RFAspectsManager.h */,
+				7C55DE241E4D97D100A69D8B /* RFAspectsManager.m */,
+				7C55DE251E4D97D100A69D8B /* RFCocoaLumberjackAspect.h */,
+				7C55DE261E4D97D100A69D8B /* RFCocoaLumberjackAspect.m */,
 			);
 			path = RFAspects;
+			sourceTree = "<group>";
+		};
+		7C55DE271E4D97D100A69D8B /* RFNet */ = {
+			isa = PBXGroup;
+			children = (
+				7C55DE281E4D97D100A69D8B /* RFNetAdapter.h */,
+				7C55DE291E4D97D100A69D8B /* RFNetAdapter.m */,
+				7C55DE2A1E4D97D100A69D8B /* RFNetWorking.h */,
+				7C55DE2B1E4D97D100A69D8B /* RFNetworking.m */,
+			);
+			path = RFNet;
+			sourceTree = "<group>";
+		};
+		7C55DE2C1E4D97D100A69D8B /* RFPersistance */ = {
+			isa = PBXGroup;
+			children = (
+				7C55DE2D1E4D97D100A69D8B /* RFPersistance.h */,
+				7C55DE2E1E4D97D100A69D8B /* RFPersistance.m */,
+				7C55DE2F1E4D97D100A69D8B /* RFPersistanceManager.h */,
+				7C55DE301E4D97D100A69D8B /* RFPersistanceManager.m */,
+			);
+			path = RFPersistance;
+			sourceTree = "<group>";
+		};
+		7C55DE311E4D97D100A69D8B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7C55DE321E4D97D100A69D8B /* NSString+MD5.h */,
+				7C55DE331E4D97D100A69D8B /* NSString+MD5.m */,
+				7C55DE341E4D97D100A69D8B /* NSString+SHA1.h */,
+				7C55DE351E4D97D100A69D8B /* NSString+SHA1.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7C55DE361E4D97D100A69D8B /* UIView+RF */ = {
+			isa = PBXGroup;
+			children = (
+				7C55DE371E4D97D100A69D8B /* UITextField+RFKeyBoard.h */,
+				7C55DE381E4D97D100A69D8B /* UITextField+RFKeyBoard.m */,
+				7C55DE391E4D97D100A69D8B /* UIView+HUD.h */,
+				7C55DE3A1E4D97D100A69D8B /* UIView+HUD.m */,
+				7C55DE3B1E4D97D100A69D8B /* UIView+RFKeyBoard.h */,
+				7C55DE3C1E4D97D100A69D8B /* UIView+RFKeyBoard.m */,
+			);
+			path = "UIView+RF";
 			sourceTree = "<group>";
 		};
 		7CA5CD9B1E2722AA002C14C8 = {
@@ -150,13 +239,13 @@
 		7CA5CDA61E2722AA002C14C8 /* RACFrame */ = {
 			isa = PBXGroup;
 			children = (
-				7C2DB5AE1E345C4A007C3231 /* RFAspects */,
-				7C1230321E30B877009193A6 /* Headers */,
-				7CA5CDB01E2722B5002C14C8 /* RFNetWorking.h */,
-				7CA5CDB11E2722B5002C14C8 /* RFNetworking.m */,
+				7C55DE191E4D97D100A69D8B /* Headers */,
+				7C55DE1C1E4D97D100A69D8B /* RFAspects */,
+				7C55DE271E4D97D100A69D8B /* RFNet */,
+				7C55DE2C1E4D97D100A69D8B /* RFPersistance */,
+				7C55DE311E4D97D100A69D8B /* Tools */,
+				7C55DE361E4D97D100A69D8B /* UIView+RF */,
 				7C1230341E30B920009193A6 /* RACPrefixHeader.pch */,
-				7C2DB5D41E349882007C3231 /* RFNetAdapter.h */,
-				7C2DB5D51E349882007C3231 /* RFNetAdapter.m */,
 			);
 			path = RACFrame;
 			sourceTree = "<group>";
@@ -166,6 +255,24 @@
 			children = (
 				7CFD0E121E274D520005259B /* RACFrameTests.m */,
 				7CFD0E141E274D520005259B /* Info.plist */,
+				7CBE68DE1E446C9000339F73 /* TestParam.h */,
+				7CBE68DF1E446C9000339F73 /* TestParam.m */,
+				7CBE68E11E446FDF00339F73 /* Test2Param.h */,
+				7CBE68E21E446FDF00339F73 /* Test2Param.m */,
+				7CBE68E41E44818F00339F73 /* TestEntity.h */,
+				7CBE68E51E44818F00339F73 /* TestEntity.m */,
+				7C3663A01E45AB0C00E966C6 /* LoginParam.h */,
+				7C3663A11E45AB0C00E966C6 /* LoginParam.m */,
+				7C8728F01E49A6A400BADA96 /* LoginValidParam.h */,
+				7C8728F11E49A6A400BADA96 /* LoginValidParam.m */,
+				7C49CB951E498F2100E8F21E /* LoginOnlineParam.h */,
+				7C49CB961E498F2100E8F21E /* LoginOnlineParam.m */,
+				7C8728ED1E49A38D00BADA96 /* LoginOnlineSilenceParam.h */,
+				7C8728EE1E49A38D00BADA96 /* LoginOnlineSilenceParam.m */,
+				7C3663A31E45AC0A00E966C6 /* LoginEntity.h */,
+				7C3663A41E45AC0A00E966C6 /* LoginEntity.m */,
+				7C8728EA1E4995D500BADA96 /* LoginSilenceParam.h */,
+				7C8728EB1E4995D500BADA96 /* LoginSilenceParam.m */,
 			);
 			path = RACFrameTests;
 			sourceTree = "<group>";
@@ -173,8 +280,8 @@
 		E2814238D35AAD3C6A0D3564 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				32CEC421638159A5E1114C46 /* Pods-RACFrame.debug.xcconfig */,
-				176E6FF956947F4B4A0F36B9 /* Pods-RACFrame.release.xcconfig */,
+				8820270696F94D2B32B1C5F1 /* Pods-RACFrame.debug.xcconfig */,
+				839AE87480F5A56412C60C1D /* Pods-RACFrame.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -306,14 +413,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA5CDB21E2722B5002C14C8 /* RFNetworking.m in Sources */,
-				7C2DB5D61E349882007C3231 /* RFNetAdapter.m in Sources */,
-				7C2DB5D21E348558007C3231 /* UIViewController+dealloc.m in Sources */,
-				7C2DB5BA1E345C61007C3231 /* RFCocoaLumberjackAspect.m in Sources */,
-				7C2DB5C01E347437007C3231 /* RFAspectsManager+Controller.m in Sources */,
-				7C2DB5BD1E345E25007C3231 /* RFAspectsManager+AppDelegate.m in Sources */,
-				7C2DB5B81E345C61007C3231 /* RFAspect.m in Sources */,
-				7C2DB5B91E345C61007C3231 /* RFAspectsManager.m in Sources */,
+				7C55DE3F1E4D97D100A69D8B /* RFAspectsManager+Controller.m in Sources */,
+				7C55DE431E4D97D100A69D8B /* RFNetworking.m in Sources */,
+				7C55DE491E4D97D100A69D8B /* UIView+HUD.m in Sources */,
+				7C55DE481E4D97D100A69D8B /* UITextField+RFKeyBoard.m in Sources */,
+				7C55DE461E4D97D100A69D8B /* NSString+MD5.m in Sources */,
+				7C55DE471E4D97D100A69D8B /* NSString+SHA1.m in Sources */,
+				7C55DE3E1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m in Sources */,
+				7C55DE441E4D97D100A69D8B /* RFPersistance.m in Sources */,
+				7C55DE3D1E4D97D100A69D8B /* RFAspect.m in Sources */,
+				7C55DE4A1E4D97D100A69D8B /* UIView+RFKeyBoard.m in Sources */,
+				7C55DE411E4D97D100A69D8B /* RFCocoaLumberjackAspect.m in Sources */,
+				7C55DE401E4D97D100A69D8B /* RFAspectsManager.m in Sources */,
+				7C55DE421E4D97D100A69D8B /* RFNetAdapter.m in Sources */,
+				7C55DE451E4D97D100A69D8B /* RFPersistanceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C49CB971E498F2100E8F21E /* LoginOnlineParam.m in Sources */,
+				7CBE68E61E44818F00339F73 /* TestEntity.m in Sources */,
 				7CFD0E131E274D520005259B /* RACFrameTests.m in Sources */,
+				7C8728EF1E49A38D00BADA96 /* LoginOnlineSilenceParam.m in Sources */,
+				7C8728EC1E4995D500BADA96 /* LoginSilenceParam.m in Sources */,
+				7C3663A51E45AC0A00E966C6 /* LoginEntity.m in Sources */,
+				7CBE68E31E446FDF00339F73 /* Test2Param.m in Sources */,
+				7C3663A21E45AB0C00E966C6 /* LoginParam.m in Sources */,
+				7C8728F21E49A6A400BADA96 /* LoginValidParam.m in Sources */,
+				7CBE68E01E446C9000339F73 /* TestParam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +550,7 @@
 		};
 		7CA5CDAE1E2722AA002C14C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32CEC421638159A5E1114C46 /* Pods-RACFrame.debug.xcconfig */;
+			baseConfigurationReference = 8820270696F94D2B32B1C5F1 /* Pods-RACFrame.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5URG289XWK;
 				GCC_PREFIX_HEADER = RACFrame/RACPrefixHeader.pch;
@@ -440,7 +562,7 @@
 		};
 		7CA5CDAF1E2722AA002C14C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 176E6FF956947F4B4A0F36B9 /* Pods-RACFrame.release.xcconfig */;
+			baseConfigurationReference = 839AE87480F5A56412C60C1D /* Pods-RACFrame.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5URG289XWK;
 				GCC_PREFIX_HEADER = RACFrame/RACPrefixHeader.pch;
@@ -452,11 +574,11 @@
 		};
 		7CFD0E181E274D520005259B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32CEC421638159A5E1114C46 /* Pods-RACFrame.debug.xcconfig */;
+			baseConfigurationReference = 8820270696F94D2B32B1C5F1 /* Pods-RACFrame.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5URG289XWK;
-				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "";
+				GCC_PREFIX_HEADER = RACFrame/RACPrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "../Pods/**";
 				INFOPLIST_FILE = RACFrameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.RACFrameTests;
@@ -466,11 +588,11 @@
 		};
 		7CFD0E191E274D520005259B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 176E6FF956947F4B4A0F36B9 /* Pods-RACFrame.release.xcconfig */;
+			baseConfigurationReference = 839AE87480F5A56412C60C1D /* Pods-RACFrame.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5URG289XWK;
-				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "";
+				GCC_PREFIX_HEADER = RACFrame/RACPrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "../Pods/**";
 				INFOPLIST_FILE = RACFrameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.RACFrameTests;

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__71-[RFNetWorking getWithUrl:andHeaders:andParams:andTimeOut:ignoreError:]_block_invoke.42:RFNetworking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "params">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__26-[LoginViewModel doLogin:]_block_invoke.76:LoginViewModel.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
