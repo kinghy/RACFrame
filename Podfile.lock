@@ -24,6 +24,7 @@ PODS:
   - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
   - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
   - OpenUDID (1.0.0)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - Aspects
   - CocoaLumberjack
   - MBProgressHUD
+  - MJRefresh
   - OpenUDID
   - ReactiveCocoa (= 2.5)
   - SDWebImage (~> 3.8)
@@ -52,11 +54,12 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: 0d120314a9722f6270612a6a0105b04754eeebc1
+PODFILE CHECKSUM: e03f41ca23cf7e72507bb1b8d08864637d04a147
 
 COCOAPODS: 1.0.1

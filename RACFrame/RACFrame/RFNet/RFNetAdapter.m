@@ -12,12 +12,13 @@
 
 @implementation RFNetAdapter
 #pragma mark - init methods
-+(instancetype)netAdapterWithParam:(id<RFParamInt>)param{
++(instancetype)netAdapterWithParam:(id<IRFParam>)param{
     return [[self alloc] initWithParam:param];
 }
 
--(instancetype)initWithParam:(id<RFParamInt>)param{
+-(instancetype)initWithParam:(id<IRFParam>)param{
     if(self = [super init]){
+        _count = 0;
         _signal = [self fetchWithParam:param];
     }
     return self;
@@ -25,7 +26,7 @@
 
 #pragma mark - public methods
 
--(RACSignal *)fetchWithParam:(id<RFParamInt>)param{
+-(RACSignal *)fetchWithParam:(id<IRFParam>)param{
     int timeout = [param respondsToSelector:@selector(getTimeOut)]?[param getTimeOut]:kRFNetTimeOut;
     BOOL isOnline = [param respondsToSelector:@selector(isOnline)]?[param isOnline]:NO;
     BOOL isSilence = [param respondsToSelector:@selector(isSilence)]?[param isSilence]:NO;
@@ -39,8 +40,12 @@
     _netWorking = [RFNetWorking netWorkingWithUrl:url andMethod:method andHeaders:headers andParams:p andTimeOut:timeout andRespSerializer:mode ignoreError:isSilence];
     RACSignal *retSignal = isOnline?[_netWorking.signal replayLazily]:_netWorking.signal;
     //这里不存在循环引用，因为sign被申明为weak
+#warning 这里在登录的时候存在无法释放的问题，暂时放下这个问题
+//    @weakify(self)
     return [retSignal flattenMap:^RACStream *(id value) {
+//        @strongify(self)
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//            @strongify(self)
             BOOL isError = false;
             NSError *error = nil;
             if([value isKindOfClass:[NSError class]]){
@@ -65,7 +70,12 @@
                 [subscriber sendNext:o];
                 [subscriber sendCompleted];
             }
-            return nil;
+            return [RACDisposable disposableWithBlock:^{
+                //            @strongify(_holdSignal);
+                if(--_count == 0){
+                    _signal = nil;
+                }
+            }];
         }];
     }];
 }
@@ -119,20 +129,21 @@
                     objc_property_t prop=properties[i];
                     NSString * name = [NSString stringWithFormat:@"%s",property_getName(prop)];
                     NSString * jsonName = name;
-//                    if ([name isEqualToString:@"ID"]) {
-//                        jsonName = @"id";
-//                    }else if([name hasPrefix:@"init"]){
-//                        jsonName =
-//                    }
                     @try {
                         id tmpJSON = [json objectForKey:jsonName];
-                        if ([ent conformsToProtocol:@protocol(RFEntityInt)] && [ent respondsToSelector:@selector(parseJson:byKey:)]) {
-                            tmpJSON = [(id<RFEntityInt>)ent parseJson:tmpJSON byKey:jsonName];
+                        if(tmpJSON==nil){
+                            tmpJSON = [json objectForKey:[jsonName lowercaseString]];
+                        }
+                        if(tmpJSON==nil){
+                            tmpJSON = [json objectForKey:[jsonName uppercaseString]];
+                        }
+                        if ([ent conformsToProtocol:@protocol(IRFEntity)] && [ent respondsToSelector:@selector(parseJson:byKey:)]) {
+                            tmpJSON = [(id<IRFEntity>)ent parseJson:tmpJSON byKey:jsonName];
                         }
                         if ([tmpJSON isKindOfClass:[NSArray class]]) {
                             Class pkClass = nil;
-                            if([ent conformsToProtocol:@protocol(RFEntityInt)] && [ent respondsToSelector:@selector(getEntityClssByKey:)]){
-                                pkClass = [(id<RFEntityInt>)ent getEntityClssByKey:jsonName];
+                            if([ent conformsToProtocol:@protocol(IRFEntity)] && [ent respondsToSelector:@selector(getEntityClssByKey:)]){
+                                pkClass = [(id<IRFEntity>)ent getEntityClssByKey:jsonName];
                             }
                             if (pkClass) {
                                 NSMutableArray *array = [NSMutableArray array];
@@ -156,8 +167,8 @@
                         }else if([tmpJSON isKindOfClass:[NSDictionary class]]){
                             Class pkClass = nil;
                             NSDictionary *tmpDict = tmpJSON;
-                            if([ent conformsToProtocol:@protocol(RFEntityInt)] && [ent respondsToSelector:@selector(getEntityClssByKey:)]){
-                                pkClass = [(id<RFEntityInt>)ent getEntityClssByKey:jsonName];
+                            if([ent conformsToProtocol:@protocol(IRFEntity)] && [ent respondsToSelector:@selector(getEntityClssByKey:)]){
+                                pkClass = [(id<IRFEntity>)ent getEntityClssByKey:jsonName];
                             }
 
                             if (pkClass) {
@@ -216,6 +227,11 @@
         return  [NSString stringWithFormat:@"%@%@",[firstChar uppercaseString],[str substringWithRange:NSMakeRange(1, str.length - 1)]] ;
     }
     return str;
+}
+
+-(RACSignal *)signal{
+    _count++;
+    return _signal;
 }
 
 -(void)dealloc{

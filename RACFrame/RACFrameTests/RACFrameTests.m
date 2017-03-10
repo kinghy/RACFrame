@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-//#import "RACFrame.h"
-//#import "RFNetWorking.h"
+#import "RACFrame.h"
+#import "RFNetWorking.h"
 //#import "RFNetAdapter.h"
 //#import "Test2Param.h"
 //#import "TestEntity.h"
@@ -20,7 +20,8 @@
 //#import "LoginValidParam.h"
 //#import <CocoaLumberjack/CocoaLumberjack.h>
 //#import "RFMacro.h"
-#import "RFPersistanceManager.h"
+#import "RFDefaultsPersistManager.h"
+#import "UserPersitance.h"
 
 @interface RACFrameTests : XCTestCase
 
@@ -38,32 +39,32 @@
     [super tearDown];
 }
 
-//- (void)testPostConnect {
-//    // This is an example of a functional test case.
-//    // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    XCTestExpectation *expectation =[self expectationWithDescription:@"High Expectations"];
-//    RFNetWorking *net = [RFNetWorking netWorkingWithUrl:@"http://192.168.6.111:8116/update/inipatch" andMethod:kPostMethod andHeaders:@{@"h1":@"h1v",@"h2":@"h3v"} andParams:@{@"version":@"v_2.1.0",@"ini_version":@"1.0"} andTimeOut:5 ignoreError:NO];
-//    
-////    RACSignal* signal = [net signal];
-//    
-//    [net.signal subscribeNext:^(id x) {
-//        NSLog(@"RFNetWorking = %@",x);
-//        [expectation fulfill];
-//    } error:^(NSError *error) {
-//        NSLog(@"RFNetWorking error= %@",error);
-//        [expectation fulfill];
-//    } completed:^{
-//        NSLog(@"RFNetWorking completed");
-//    }];
-//    
-//    [self waitForExpectationsWithTimeout:15.0 handler:^(NSError *error) {
-//        if (error) {
-//            NSLog(@"Timeout Error: %@", error);
-//        }
-//    }];
-//    
-//    
-//}
+- (void)testPostConnect {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCTestExpectation *expectation =[self expectationWithDescription:@"High Expectations"];
+    RFNetWorking *net = [RFNetWorking netWorkingWithUrl:@"http://192.168.6.111:8116/update/inipatch" andMethod:RFNetWorkingMethodGet andHeaders:@{@"h1":@"h1v",@"h2":@"h3v"} andParams:@{@"version":@"v_2.1.0",@"ini_version":@"1.0"} andTimeOut:5 andRespSerializer:RFNetWorkingRespSerializerJSON ignoreError:NO];
+    
+//    RACSignal* signal = [net signal];
+    
+    [net.signal subscribeNext:^(id x) {
+        NSLog(@"RFNetWorking = %@",x);
+        [expectation fulfill];
+    } error:^(NSError *error) {
+        NSLog(@"RFNetWorking error= %@",error);
+        [expectation fulfill];
+    } completed:^{
+        NSLog(@"RFNetWorking completed");
+    }];
+    
+    [self waitForExpectationsWithTimeout:15.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+    
+    
+}
 //
 //- (void)testSilencePostConnect {
 //    // This is an example of a functional test case.
@@ -526,22 +527,18 @@
 //}
 
 -(void)testPersistance{
-    RFPersistanceManager *m = [RFPersistanceManager sharedInstace];
-    [m removeDictionaryWithTag:@"test"];
-    NSMutableDictionary *d = [m findDictionaryWithTag:@"test"];
-    NSMutableDictionary *d1 = [m findDictionaryWithTag:@"test"];
-    XCTAssertNil([d1 objectForKey:@"321"]);
-    [d setObject:@"123" forKey:@"321"];
-    XCTAssertTrue([@"123" isEqualToString:[d1 objectForKey:@"321"]]);
-
-    NSMutableDictionary *dd = [m findDictionaryWithTag:@"test2"];
-    NSMutableDictionary *dd2 = [m findDictionaryWithTag:@"test2"];
-//    XCTAssertNil([dd2 objectForKey:@"2321"]);
-//    [dd setObject:@"2123" forKey:@"2321"];
-    XCTAssertTrue([@"2123" isEqualToString:[dd2 objectForKey:@"2321"]]);
+    id<IRFPersistManager> m = [RFDefaultsPersistManager sharedInstace];
+    UserPersitance* u1 = (UserPersitance*)[m persistanceByClass:[UserPersitance class] andTag:@"user"];
+    UserPersitance* u2 = (UserPersitance*)[m persistanceByClass:[UserPersitance class] andTag:@"user"];
     
-    [m flush];
+    u1.uid = [[NSDate date] description];
+    NSLog(@"u1.uid = %@",u1.uid);
+    NSLog(@"u2.uid = %@",u2.uid);
     
+    XCTAssertFalse([u2.uid isEqualToString:u1.uid]);
+    [u1 commit];
+    [u2 refresh];
+    XCTAssertTrue([u2.uid isEqualToString:u1.uid]);
     
 }
 

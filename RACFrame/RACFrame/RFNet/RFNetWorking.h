@@ -18,7 +18,10 @@ typedef NS_ENUM(NSInteger, RFNetWorkingMethod) {
     RFNetWorkingMethodPost,
 };
 
-@interface RFNetWorking : NSObject
+@interface RFNetWorking : NSObject{
+    long _count;//为保证调用的方面主动形成引用循环，在计数归0后打破循环
+    RACSignal* _signal;
+}
 
 /**
  以POST/GET方式进行网络请求，如果请求正常则sendNext,如果异常则sendError，但是当isSilence为true时将异常信息正常sendNext需要由用户自行处理
@@ -46,5 +49,5 @@ typedef NS_ENUM(NSInteger, RFNetWorkingMethod) {
  */
 -(instancetype)initWithUrl:(NSString*)url andMethod:(RFNetWorkingMethod)method andHeaders:(NSDictionary*)headers andParams:(NSDictionary*)params andTimeOut:(int)timeOut andRespSerializer:(RFNetWorkingRespSerializer)serializer ignoreError:(BOOL)ignoreError;
 
-@property (weak,nonatomic,readonly) RACSignal *signal;
+@property (strong,nonatomic,readonly) RACSignal *signal;
 @end

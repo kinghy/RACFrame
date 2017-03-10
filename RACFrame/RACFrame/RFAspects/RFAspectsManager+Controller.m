@@ -11,6 +11,7 @@
 
 @implementation RFAspectsManager (Controller)
 #pragma mark - public methods
+
 -(void)installControler{
     @weakify(self);
     [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){

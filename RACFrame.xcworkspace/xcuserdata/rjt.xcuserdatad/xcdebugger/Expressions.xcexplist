@@ -3,15 +3,46 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__26-[LoginViewModel doLogin:]_block_invoke.76:LoginViewModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppParam getHeaders]:AppParam.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "u.uid">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RFNetAdapter fetchWithParam:]:RFNetAdapter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RFNetAdapter initWithParam:]:RFNetAdapter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RACFrameTests testPersistance]:RACFrameTests.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RFNetWorking initWithUrl:andMethod:andHeaders:andParams:andTimeOut:andRespSerializer:ignoreError:]:RFNetworking.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[NSString(RFValidate) validateInputMobile]:NSString+RFValidate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RFNetWorking postWithUrl:andHeaders:andParams:andTimeOut:andRespSerializer:ignoreError:]:RFNetworking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tSignal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__71-[RFNetWorking getWithUrl:andHeaders:andParams:andTimeOut:ignoreError:]_block_invoke.42:RFNetworking.m">
          <PersistentStrings>
             <PersistentString
                value = "params">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__26-[LoginViewModel doLogin:]_block_invoke.76:LoginViewModel.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -9,5 +9,6 @@ target "RACFrame" do
   pod 'MBProgressHUD'
   pod 'SDWebImage', '~>3.8'
   pod 'OpenUDID'
+  pod 'MJRefresh'
   xcodeproj 'RACFrame/RACFrame.xcodeproj'
 end

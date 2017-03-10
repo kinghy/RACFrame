@@ -10,7 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "RFNetAdapter.h"
 
-@interface LoginParam : NSObject<RFParamInt>
+@interface LoginParam : NSObject<IRFParam>
 @property (strong,nonatomic) NSString* logInID;//	手机号/UID	Int	TRUE
 @property (strong,nonatomic) NSString* password;//	密码	sha1(String)	TRUE
 @property (strong,nonatomic) NSString* logInType;//	1-手机的验证码登录、2-手机的安全码登录、3-操盘宝登录、6-UID登陆	Int	TRUE

@@ -12,7 +12,7 @@
 
 @class TestRecordsEntity;
 @class TestDictEntity;
-@interface TestEntity : NSObject<RFEntityInt>
+@interface TestEntity : NSObject<IRFEntity>
 
 @property (strong,nonatomic) NSString* test;
 @property (strong,nonatomic) NSMutableArray<TestRecordsEntity*>* records;

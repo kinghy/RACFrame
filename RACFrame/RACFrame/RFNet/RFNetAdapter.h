@@ -13,9 +13,9 @@
 
 @class RFNetWorking;
 
-@protocol RFParamInt <NSObject>
+@protocol IRFParam <NSObject>
 
-
+@required
 /**
  返回网络地址
  
@@ -95,7 +95,7 @@
 
 @end
 
-@protocol RFEntityInt <NSObject>
+@protocol IRFEntity <NSObject>
 
 @optional
 -(Class)getEntityClssByKey:(NSString*)key;
@@ -107,25 +107,27 @@
 
 @interface RFNetAdapter : NSObject{
     RFNetWorking *_netWorking;
+    RACSignal *_signal;
+    long _count;
 }
 
 /**
- 使用实现RFParamInt协议的对象来访问网络
+ 使用实现IRFParam协议的对象来访问网络
 
- @param param 实现RFParamInt协议的对象
+ @param param 实现IRFParam协议的对象
  @return 返回一个RFNetAdapter实例
  */
-+(instancetype)netAdapterWithParam:(id<RFParamInt>)param;
++(instancetype)netAdapterWithParam:(id<IRFParam>)param;
 
 /**
- 使用实现RFParamInt协议的对象来访问网络
+ 使用实现IRFParam协议的对象来访问网络
  
- @param param 实现RFParamInt协议的对象
+ @param param 实现IRFParam协议的对象
  @return 返回一个RFNetAdapter实例
  */
--(instancetype)initWithParam:(id<RFParamInt>)param;
+-(instancetype)initWithParam:(id<IRFParam>)param;
 
-@property (weak,nonatomic,readonly) RACSignal *signal;
+@property (strong,nonatomic,readonly) RACSignal *signal;
 
 //工具方法，便于测试，无须直接调用
 -(NSDictionary*)getDictFromParam:(NSObject *)param class:(Class)cls;

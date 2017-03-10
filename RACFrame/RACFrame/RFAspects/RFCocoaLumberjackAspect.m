@@ -12,14 +12,13 @@
 @implementation RFCocoaLumberjackAspect
 
 //注册
-REGISTER_AS_ASPECTS
+@REGISTER_AS_ASPECTS
 
 #pragma mark - RFAppAspectInt methods
 //实现切片
 -(void)before_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions andInstance:(id)instance{
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
     [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
-    
 //    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
 //    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
 //    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;

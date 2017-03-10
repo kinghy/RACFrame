@@ -9,6 +9,7 @@
 #import "RFNetWorking.h"
 #import <AFNetworking/AFNetworking.h>
 
+
 @implementation RFNetWorking
 
 +(instancetype)netWorkingWithUrl:(NSString*)url andMethod:(RFNetWorkingMethod)method andHeaders:(NSDictionary*)headers andParams:(NSDictionary*)params andTimeOut:(int)timeOut andRespSerializer:(RFNetWorkingRespSerializer)serializer ignoreError:(BOOL)ignoreError{
@@ -18,6 +19,7 @@
 
 -(instancetype)initWithUrl:(NSString *)url andMethod:(RFNetWorkingMethod)method andHeaders:(NSDictionary *)headers andParams:(NSDictionary *)params andTimeOut:(int)timeOut andRespSerializer:(RFNetWorkingRespSerializer)serializer ignoreError:(BOOL)ignoreError{
     if(self=[super init]){
+        _count = 0;
         switch (method) {
             case RFNetWorkingMethodPost:
                 _signal = [self postWithUrl:url andHeaders:headers andParams:params andTimeOut:timeOut  andRespSerializer:serializer ignoreError:ignoreError ];
@@ -28,6 +30,7 @@
             default:
                 break;
         }
+
     }
     return self;
 }
@@ -53,19 +56,24 @@
                 [subscriber sendError:error];
             }
         }];
-        return nil;
+        return [RACDisposable disposableWithBlock:^{
+            //            @strongify(_holdSignal);
+            NSLog(@"%ld",_count);
+            if(--_count == 0){
+                _signal = nil;
+            }
+        }];
     }];
 ;
 }
 
 -(RACSignal *)getWithUrl:(NSString*)url andHeaders:(NSDictionary *)headers andParams:(NSDictionary *)params andTimeOut:(int)timeOut  andRespSerializer:(RFNetWorkingRespSerializer)serializer ignoreError:(BOOL)ignoreError{
-//    @weakify(self)
+//    @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//        @strongify(self);
+        //        @strongify(self);
         AFHTTPSessionManager *manager = [self createManagerWithHeaders:headers andTimeOut:timeOut andRespSerializer:serializer];
         NSString *strUrl = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//对中文进行编码
         NSDictionary* tmpdict = [self filteParams:params];
-        
         [manager GET:strUrl parameters:tmpdict progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             [subscriber sendNext:responseObject];
@@ -78,9 +86,15 @@
                 [subscriber sendError:error];
             }
         }];
-        return nil;
+        return [RACDisposable disposableWithBlock:^{
+            //            @strongify(_holdSignal);
+            if(--_count == 0){
+                _signal = nil;
+            }
+        }];
     }];
 }
+
 
 -(AFHTTPSessionManager*)createManagerWithHeaders:(NSDictionary *)headers andTimeOut:(int)timeOut andRespSerializer:(RFNetWorkingRespSerializer)serializer{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -114,6 +128,11 @@
         [tmpdict removeObjectForKey:@"ID"];
     }
     return tmpdict;
+}
+
+-(RACSignal *)signal{
+    _count++;
+    return _signal;
 }
 
 -(void)dealloc{

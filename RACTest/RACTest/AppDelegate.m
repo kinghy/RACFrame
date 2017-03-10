@@ -8,9 +8,12 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-#import "MainViewController.h"
+#import "IndexViewController.h"
+#import "ServerViewModel.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    LoginViewModel* model;
+}
 
 @end
 
@@ -25,7 +28,8 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil]];
+    self.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[IndexViewController alloc] initWithNibName:@"IndexViewController" bundle:nil]];
+    self.window.rootViewController = self.rootViewController;
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -51,6 +55,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [[ServerViewModel sharedInstance] updateServerTime];
+    
 }
 
 
