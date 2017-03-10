@@ -15,6 +15,7 @@
 		7C23116F1E5EDE370042E742 /* UIAlertView+RF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C23116E1E5EDE370042E742 /* UIAlertView+RF.m */; };
 		7C3663A21E45AB0C00E966C6 /* LoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3663A11E45AB0C00E966C6 /* LoginParam.m */; };
 		7C3663A51E45AC0A00E966C6 /* LoginEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3663A41E45AC0A00E966C6 /* LoginEntity.m */; };
+		7C4786711E726CD3005518D5 /* RFDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4786701E726CD3005518D5 /* RFDataSource.m */; };
 		7C49CB971E498F2100E8F21E /* LoginOnlineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49CB961E498F2100E8F21E /* LoginOnlineParam.m */; };
 		7C55DE3D1E4D97D100A69D8B /* RFAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE1E1E4D97D100A69D8B /* RFAspect.m */; };
 		7C55DE3E1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C55DE201E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m */; };
@@ -91,6 +92,8 @@
 		7C3663A11E45AB0C00E966C6 /* LoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginParam.m; sourceTree = "<group>"; };
 		7C3663A31E45AC0A00E966C6 /* LoginEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEntity.h; sourceTree = "<group>"; };
 		7C3663A41E45AC0A00E966C6 /* LoginEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEntity.m; sourceTree = "<group>"; };
+		7C47866F1E726CD3005518D5 /* RFDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFDataSource.h; sourceTree = "<group>"; };
+		7C4786701E726CD3005518D5 /* RFDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDataSource.m; sourceTree = "<group>"; };
 		7C49CB951E498F2100E8F21E /* LoginOnlineParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOnlineParam.h; sourceTree = "<group>"; };
 		7C49CB961E498F2100E8F21E /* LoginOnlineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOnlineParam.m; sourceTree = "<group>"; };
 		7C55DE1A1E4D97D100A69D8B /* RACFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACFrame.h; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				7C0FAB7D1E65507700654DF2 /* RFSplitSection.m */,
 				7C0FAB7F1E6557CD00654DF2 /* RFSplitEntity.h */,
 				7C0FAB801E6557CD00654DF2 /* RFSplitEntity.m */,
+				7C47866F1E726CD3005518D5 /* RFDataSource.h */,
+				7C4786701E726CD3005518D5 /* RFDataSource.m */,
 			);
 			path = RFUI;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4786711E726CD3005518D5 /* RFDataSource.m in Sources */,
 				7C55DE3F1E4D97D100A69D8B /* RFAspectsManager+Controller.m in Sources */,
 				7C55DE431E4D97D100A69D8B /* RFNetworking.m in Sources */,
 				7C55DE491E4D97D100A69D8B /* UIView+HUD.m in Sources */,

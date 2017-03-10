@@ -25,6 +25,7 @@
 #pragma mark - extends methods
 
 -(void)viewModelDidLoad{
+    [super viewModelDidLoad];
     @weakify(self);
     _loginCmd = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);

@@ -16,6 +16,7 @@
 #import "AppValueMacro.h"
 #import "AppViewController.h"
 #import "AppViewModel.h"
+#import "AppListViewModel.h"
 #import "AppParam.h"
 #import "UIView+SimpleMakeToast.h"
 #import "UIButton+Corner.h"

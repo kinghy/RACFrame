@@ -55,6 +55,7 @@
 #import "UITableView+RFUI.h"
 #import "RFSplitSection.h"
 #import "UIScrollView+RFUI.h"
+#import "RFDataSource.h"
 //MJRefresh
 
 #endif /* RACFrame_h */

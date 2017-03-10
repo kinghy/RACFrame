@@ -98,7 +98,25 @@
     //    self.scrollView.pagingEnabled=YES;//scrollView不会停在页面之间，即只会显示第一页或者第二页，不会各一半显示
     self.scrollView.delegate = self;
     [self loadBtn];
-    
+    @weakify(self)
+    [self.btnArray.rac_sequence.signal subscribeNext:^(id x) {
+        RACTupleUnpack(UIButton* curBtn,UITableView* curTable,MyStrategyViewModel* model) = x;
+        @strongify(self)
+        [model.dataSource.errorsSignal subscribeNext:^(NSError* error) {
+            @strongify(self)
+            [self.view makeQuickToast:error.userInfo[kErrorMsg]];
+            [curTable endHeaderRefreshing];
+            [curTable endFooterRefreshingWithNoMoreData:NO];
+            [self.view hideWaiting];
+        }];
+        [curTable bindDataSource:model.dataSource.recordsSignal withSection:[MyStrategySection class] andEmptySection:[EmptyListSection class]];
+        [model.dataSource.recordsSignal subscribeNext:^(id x) {
+            @strongify(self)
+            [curTable endHeaderRefreshing];
+            [curTable endFooterRefreshingWithNoMoreData:NO];
+            [self.view hideWaiting];
+        }];
+    }];
     
 }
 
@@ -109,43 +127,11 @@
 
 #pragma mark - private methods
 -(void)loadNewData:(MyStrategyViewModel*)model andTable:(UITableView*)table{
-    @weakify(self);
-    [[model renewList] subscribeNext:^(id x) {
-        RACTupleUnpack(NSArray<MyAllListRecordsEntity*> *allArray,NSArray<MyAllListRecordsEntity*> *newArray) = x;//第一个存放所有元素，第二个存放新增元素
-        if(allArray && allArray.count>0){
-            [table removeAllEntities];
-            [table addEntities:newArray withSection:[MyStrategySection class]];
-        }else{
-            [table removeAllEntities];
-            [table addEntity:[NSObject new] withSection:[EmptyListSection class]];
-        }
-        [table reloadData];
-        @strongify(self);
-        [table endHeaderRefreshing];
-        [self.view hideWaiting];
-        
-    } completed:^{
-        @strongify(self);
-        [table endHeaderRefreshing];
-        [self.view hideWaiting];
-    }];
+    [model renew];
 }
 
 -(void)loadNextData:(MyStrategyViewModel*)model andTable:(UITableView*)table{
-    [[model refreshList] subscribeNext:^(id x) {
-        RACTupleUnpack(NSArray<MyAllListRecordsEntity*> *allArray,NSArray<MyAllListRecordsEntity*> *newArray) = x;//第一个存放所有元素，第二个存放新增元素
-        if(newArray.count>0){
-            [table addEntities:newArray withSection:[MyStrategySection class]];
-            [table reloadData];
-            [table endFooterRefreshingWithNoMoreData:NO];
-        }else{
-            [table endFooterRefreshingWithNoMoreData:YES];
-        }
-    }error:^(NSError *error) {
-        [table endFooterRefreshingWithNoMoreData:NO];
-    } completed:^{
-        [table endFooterRefreshingWithNoMoreData:NO];
-    }];
+    [model turning];
 }
 //创建按钮
 -(void)loadBtn{
@@ -229,7 +215,7 @@
         }else if(table == _notlastTable){
             s.titleLabel.text = @"暂无非最后持仓日策略";
             s.publishBtn.hidden = YES;
-        }else if(table == _sellModel){
+        }else if(table == _sellTable){
             s.titleLabel.text = @"暂无已平仓策略";
             s.publishBtn.hidden = YES;
         }

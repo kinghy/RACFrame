@@ -36,6 +36,7 @@
 }
 #pragma mark - extends methods
 -(void)viewModelDidLoad{
+    [super viewModelDidLoad];
     [self loadViewModel];
     @weakify(self)
     self.doCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {

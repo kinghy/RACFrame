@@ -27,6 +27,7 @@
 		7C2311661E5ED7220042E742 /* DissentOrderParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2311651E5ED7220042E742 /* DissentOrderParam.m */; };
 		7C23116C1E5ED8190042E742 /* DissentOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */; };
 		7C2C42521E4B0E7700BA8E21 /* libToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2C42511E4B0E7700BA8E21 /* libToast.a */; };
+		7C4786741E727435005518D5 /* AppListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4786731E727435005518D5 /* AppListViewModel.m */; };
 		7C5AAC341E5D23A50032AC64 /* PayDissentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */; };
 		7C5AAC351E5D23A50032AC64 /* PayDissentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */; };
 		7C6FE2F71E67C60300A9F8D1 /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6FE2F61E67C60300A9F8D1 /* libMJRefresh.a */; };
@@ -512,6 +513,8 @@
 		7C23116A1E5ED8190042E742 /* DissentOrderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DissentOrderEntity.h; sourceTree = "<group>"; };
 		7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DissentOrderEntity.m; sourceTree = "<group>"; };
 		7C2C42511E4B0E7700BA8E21 /* libToast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libToast.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/Toast/libToast.a"; sourceTree = "<group>"; };
+		7C4786721E727435005518D5 /* AppListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListViewModel.h; sourceTree = "<group>"; };
+		7C4786731E727435005518D5 /* AppListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListViewModel.m; sourceTree = "<group>"; };
 		7C5AAC311E5D23A50032AC64 /* PayDissentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDissentViewController.h; sourceTree = "<group>"; };
 		7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDissentViewController.m; sourceTree = "<group>"; };
 		7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayDissentViewController.xib; sourceTree = "<group>"; };
@@ -1792,6 +1795,8 @@
 				7CA6BDA01E5C153A007704B9 /* AppViewController.m */,
 				7CA6BDA11E5C153A007704B9 /* AppViewModel.h */,
 				7CA6BDA21E5C153A007704B9 /* AppViewModel.m */,
+				7C4786721E727435005518D5 /* AppListViewModel.h */,
+				7C4786731E727435005518D5 /* AppListViewModel.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -2503,6 +2508,7 @@
 				7CA6BE241E5C52F5007704B9 /* AppUtil.m in Sources */,
 				7CA6BE151E5C3E3D007704B9 /* OrderDetailsParam.m in Sources */,
 				7CC726371E6930EB0038A3EF /* MyStrategyViewModel.m in Sources */,
+				7C4786741E727435005518D5 /* AppListViewModel.m in Sources */,
 				7CC7263A1E6932900038A3EF /* MyAllListEntity.m in Sources */,
 				7C23116C1E5ED8190042E742 /* DissentOrderEntity.m in Sources */,
 				7C0FAB781E65200500654DF2 /* UserViewModel.m in Sources */,

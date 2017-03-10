@@ -12,7 +12,6 @@
 
 @interface RFTableAdapter ()
 @property (strong, nonatomic) NSMutableArray<RFSectionBox*> *records;
-@property (strong, nonatomic) NSMutableArray<NSObject*> *entities;
 @property (strong, nonatomic) RACSubject *unbindSignal;
 @property (strong, nonatomic) NSArray<NSString*> *nibArray;
 @property (strong, nonatomic) NSMutableDictionary<NSString*,UIView*> *sectionDict;
@@ -30,7 +29,6 @@
 -(instancetype)initWithTable:(UITableView *)table andController:(id<RFTableDelegate>)controller andNibArray:(NSArray<NSString *> *)nibArray{
     if(self = [super init]){
         _records = [NSMutableArray<RFSectionBox*> array];
-        _entities = [NSMutableArray<NSObject*> array];
         _table = table;
         _table.delegate = self;
         _table.dataSource = self;
@@ -80,10 +78,29 @@
 
 -(void)removeAll{
     [_records removeAllObjects];
-    [_entities removeAllObjects];
 }
 
+-(void)bindDataSource:(RACSignal*)dsSignal withSection:(Class)clss andEmptySection:(__unsafe_unretained Class)emptyClss{
+    [self unbindDataSource];
+    @weakify(self)
+    [[dsSignal takeUntil:_unbindSignal] subscribeNext:^(NSArray *array) {
+        @strongify(self);
+        [self removeAll];
+        if((array==nil || array.count == 0) && emptyClss){
+            [self addEntity:[[NSObject alloc] init] withSection:emptyClss];
+        }else{
+            [self addEntities:array withSection:clss];
+            
+        }
+        [self.table reloadData];
+    }];
+}
 
+-(void)unbindDataSource{
+    [_unbindSignal sendNext:@YES];
+    [_unbindSignal sendCompleted];
+
+}
 #pragma mark - private methods
 
 #pragma mark - delegate methods

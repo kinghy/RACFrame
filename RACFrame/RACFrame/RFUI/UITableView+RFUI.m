@@ -41,6 +41,14 @@ static NSString *adapterKey = @"adapterKey";
     [self.adapter removeAll];
 }
 
+-(void)bindDataSource:(RACSignal *)dsSignal withSection:(Class)clss andEmptySection:(Class)emptyClss{
+    [self.adapter bindDataSource:dsSignal withSection:clss andEmptySection:emptyClss];
+}
+
+-(void)unbindDataSource{
+    [self.adapter unbindDataSource];
+}
+
 #pragma mark - private methods
 
 #pragma mark - delegate methods

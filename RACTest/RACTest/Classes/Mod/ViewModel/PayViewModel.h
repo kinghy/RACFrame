@@ -9,12 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class SettlementsRecordsEntity;
-@interface PayViewModel : AppViewModel
+@interface PayViewModel : AppListViewModel
 
-@property (nonatomic,strong)NSMutableArray<SettlementsRecordsEntity*> *payList;//不要RACObserver此属性
-
--(RACSignal*)renewPayList;
--(RACSignal*)refreshPayList;
 -(RACSignal*)doSettleWithId:(NSString*)pid andType:(NSString*)ptype;
 -(RACCommand*)bindDoSettleWithId:(NSString*)pid andType:(NSString*)ptype;
 

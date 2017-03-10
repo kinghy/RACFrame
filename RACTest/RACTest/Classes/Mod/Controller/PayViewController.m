@@ -13,6 +13,7 @@
 #import "SettlementsEntity.h"
 #import "PayDetailViewModel.h"
 #import "PayDetailViewController.h"
+#import "EmptyListSection.h"
 
 @interface PayViewController ()<RFTableDelegate,RFRefreshDelegate>{
     
@@ -29,8 +30,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.payTableView.backgroundColor = kTableBgColor;
-    [self.payTableView rftableWithController:self andNibArray:@[@"PaySection"]];
-    [self.payTableView rfrefreshWithController:self andObject:_viewModel];
+
 
 }
 
@@ -59,52 +59,33 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self navigationBarHidden:NO statusBarStyle:UIStatusBarStyleDefault title:@"收付款"];
-    [self loadNewData];
+    [_viewModel renew];
     [self.view showWaiting];
+}
+
+-(void)bindViewModel{
+    [self.payTableView rftableWithController:self andNibArray:@[@"PaySection",@"EmptyListSection"]];
+    [self.payTableView rfrefreshWithController:self andObject:_viewModel];
+    @weakify(self)
+    [_viewModel.dataSource.errorsSignal subscribeNext:^(NSError* error) {
+        @strongify(self)
+        [self.view makeQuickToast:error.userInfo[kErrorMsg]];
+        [self.payTableView endHeaderRefreshing];
+        [self.payTableView endFooterRefreshingWithNoMoreData:NO];
+        [self.view hideWaiting];
+    }];
+    [self.payTableView bindDataSource:_viewModel.dataSource.recordsSignal withSection:[PaySection class] andEmptySection:[EmptyListSection class]];
+    [_viewModel.dataSource.recordsSignal subscribeNext:^(id x) {
+        @strongify(self)
+        [self.payTableView endHeaderRefreshing];
+        [self.payTableView endFooterRefreshingWithNoMoreData:NO];
+        [self.view hideWaiting];
+    }];
 }
 #pragma mark - public methods
 
 #pragma mark - private methods
--(void)loadNewData{
-    @weakify(self);
-    [[_viewModel renewPayList] subscribeNext:^(id x) {
-        @strongify(self);
-        RACTupleUnpack(NSArray<SettlementsRecordsEntity*> *allArray,NSArray<SettlementsRecordsEntity*> *newArray) = x;//第一个存放所有元素，第二个存放新增元素
-        [self.payTableView removeAllEntities];
-        [self.payTableView addEntities:newArray withSection:[PaySection class]];
-        [self.payTableView reloadData];
-    }error:^(NSError *error) {
-        @strongify(self);
-        [self.payTableView endHeaderRefreshing];
-        [self.view hideWaiting];
 
-    } completed:^{
-        @strongify(self);
-        [self.payTableView endHeaderRefreshing];
-        [self.view hideWaiting];
-    }];
-}
-
--(void)loadNextData{
-    @weakify(self);
-    [[_viewModel refreshPayList] subscribeNext:^(id x) {
-        @strongify(self);
-        RACTupleUnpack(NSArray<SettlementsRecordsEntity*> *allArray,NSArray<SettlementsRecordsEntity*> *newArray) = x;//第一个存放所有元素，第二个存放新增元素
-        if(newArray.count>0){
-            [self.payTableView addEntities:newArray withSection:[PaySection class]];
-            [self.payTableView reloadData];
-            [self.payTableView endFooterRefreshingWithNoMoreData:NO];
-        }else{
-            [self.payTableView endFooterRefreshingWithNoMoreData:YES];
-        }
-    }error:^(NSError *error) {
-        @strongify(self);
-        [self.payTableView.mj_footer endRefreshing];
-    } completed:^{
-        @strongify(self);
-        [self.payTableView endHeaderRefreshing];
-    }];
-}
 #pragma mark - delegate methods
 -(void)rftable:(UITableView *)table forSection:(UIView *)section entity:(id)entity{
     if([section isKindOfClass:[PaySection class]]){
@@ -164,11 +145,11 @@
 
 
 -(void)refresh:(UIScrollView *)view headerBeginRefreshing:(MJRefreshComponent *)refreshView withObject:(NSObject *)obj{
-    [self loadNewData];
+    [_viewModel renew];
 }
 
 -(void)refresh:(UIScrollView *)view footerBeginRefreshing:(MJRefreshComponent *)refreshView withObject:(NSObject *)ob{
-    [self loadNextData];
+    [_viewModel turning];
 }
 #pragma mark - Action methods
 

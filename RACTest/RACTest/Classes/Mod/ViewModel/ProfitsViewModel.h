@@ -8,6 +8,6 @@
 
 #import "AppViewModel.h"
 
-@interface ProfitsViewModel : AppViewModel
+@interface ProfitsViewModel : AppListViewModel
 
 @end

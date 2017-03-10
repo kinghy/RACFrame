@@ -13,51 +13,28 @@
 
 @implementation PayViewModel
 
--(void)viewModelDidLoad{
-    _payList = [NSMutableArray array];
+-(void)renew{
+    [self refresh:@"0"];
 }
 
--(RACSignal*)renewPayList{
-    return [self refresh:@"0"];
+-(void)turning{
+    SettlementsRecordsEntity *e =  [self.dataSource.records lastObject];
+    [self refresh:(e==nil)?@"0":e.ID];
 }
 
--(RACSignal*)refreshPayList{
-    SettlementsRecordsEntity *e =  [_payList lastObject];
-    return [self refresh:(e==nil)?@"0":e.ID];
-}
-
--(RACSignal*)refresh:(NSString *)startid{
-    @weakify(self);
-    
+-(void)refresh:(NSString *)startid{
     SettlementsParam *p = [SettlementsParam new];
     p.start_id = startid;
     p.limit = kArrayLimit;
-    RACSignal* signal = [RFNetAdapter netAdapterWithParam:p].signal;
-    
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [signal subscribeNext:^(id x) {
-            @strongify(self);
-            if([x isKindOfClass:[SettlementsEntity class]]) {
-                SettlementsEntity *e = (SettlementsEntity*)x;
-                NSMutableArray *payList = [self mutableArrayValueForKey:@"payList"];
-                if([startid isEqualToString:@"0"]){
-                    [payList removeAllObjects];
-                }
-                [payList addObjectsFromArray:e.records];
-                id data = RACTuplePack(self.payList,e.records);
-                [subscriber sendNext:data];
-                [subscriber sendCompleted];
-            }else{
-    
-            }
-        } error:^(NSError *error) {
-            [subscriber sendError:error];
-        } completed:^{
-            [subscriber sendCompleted];
-        }];
-
-        return nil;
+    RACSignal* signal = [[RFNetAdapter netAdapterWithParam:p].signal map:^id(id value) {
+        NSMutableArray * arr = [NSMutableArray array];
+        if([value isKindOfClass:[SettlementsEntity class]]) {
+            [arr addObjectsFromArray:[(SettlementsEntity*)value records]];
+        }
+        return arr;
     }];
+    BOOL clear = [startid isEqualToString:@"0"];
+    [self.dataSource refresh:signal andClear:clear];
 }
 
 -(RACSignal *)doSettleWithId:(NSString *)pid andType:(NSString *)ptype{

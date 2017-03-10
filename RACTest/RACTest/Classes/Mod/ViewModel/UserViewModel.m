@@ -25,6 +25,7 @@
 }
 #pragma mark - extends methods
 -(void)viewModelDidLoad{
+    [super viewModelDidLoad];
     _user = (UserPersistance*)[[RFDefaultsPersistManager sharedInstace] persistanceByClass:[UserPersistance class] andTag:kUserPersistanceKey];
     [self update];
 }

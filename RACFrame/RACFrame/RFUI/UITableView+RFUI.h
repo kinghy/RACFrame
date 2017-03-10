@@ -40,7 +40,17 @@
 -(void)addSplitWithColor:(UIColor*)color andHeight:(float)height;
 -(void)addSplitWithColor:(UIColor*)color;
 -(void)removeAllEntities;
-
+/**
+ 使用RAC绑定指定的数据源，一旦开启此功能，请不要再使用addEntity系列方法
+ 
+ @param dsSignal 绑定数据源,例如RACObserve(_vm,records)
+ @param clss 渲染用的section类
+ */
+-(void)bindDataSource:(RACSignal*)dsSignal withSection:(Class)clss andEmptySection:(Class)emptyClss;
+/**
+ 解绑数据源
+ */
+-(void)unbindDataSource;
 @property (nonatomic,strong) RFTableAdapter* adapter;
 
 @end

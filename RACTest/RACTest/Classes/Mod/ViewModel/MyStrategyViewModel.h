@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class MyAllListRecordsEntity;
-@interface MyStrategyViewModel : NSObject{
+@interface MyStrategyViewModel : AppListViewModel{
     RACSubject *_stopSubject;
 }
 
@@ -17,18 +17,13 @@
 
 @property (nonatomic,strong)NSString *refreshFlg;
 
-@property (nonatomic,strong)NSMutableArray<MyAllListRecordsEntity*> *list;//不要RACObserver此属性
 
 +(instancetype)viewModelWithType:(NSString*)type;
 
 -(instancetype)initWithType:(NSString*)type;
 
--(RACSignal*)renewList;
--(RACSignal*)refreshList;
--(RACSignal*)refreshProfits;
+-(void)refreshProfits;
 -(void)stopRefreshProfit;//停止刷新浮盈
 -(void)startRefreshProfit;//停止刷新浮盈
-
--(void)clearList;
 
 @end
