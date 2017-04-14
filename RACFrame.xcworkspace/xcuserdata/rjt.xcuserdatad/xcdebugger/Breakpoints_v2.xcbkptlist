@@ -181,13 +181,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RACTest/RACTest/Classes/Mod/ViewModel/LoginViewModel.m"
-            timestampString = "510818272.838054"
+            filePath = "RACFrame/RACFrame/UIView+RF/UITextField+Format.m"
+            timestampString = "510124525.243671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-loginSignal"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-mobileTextField:shouldChangeCharactersInRange:replacementString:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RACTest/RACTest/Classes/Mod/ViewModel/UserViewModel.m"
+            timestampString = "511146117.053889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-logout"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -197,13 +213,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RACFrame/RACFrame/UIView+RF/UITextField+Format.m"
-            timestampString = "510124525.243671"
+            filePath = "RACTest/RACTest/Classes/Mod/ViewModel/MyStrategyViewModel.m"
+            timestampString = "511159148.444092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-mobileTextField:shouldChangeCharactersInRange:replacementString:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-viewModelDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProfitsViewModel.h"
 
 @class MyAllListRecordsEntity;
 @interface MyStrategyViewModel : AppListViewModel{
     RACSubject *_stopSubject;
+    ProfitsViewModel *_pViewModel;
 }
 
 @property (nonatomic,strong)NSString *type;
@@ -22,8 +24,5 @@
 
 -(instancetype)initWithType:(NSString*)type;
 
--(void)refreshProfits;
--(void)stopRefreshProfit;//停止刷新浮盈
--(void)startRefreshProfit;//停止刷新浮盈
 
 @end

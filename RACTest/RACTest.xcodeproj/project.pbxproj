@@ -27,6 +27,8 @@
 		7C2311661E5ED7220042E742 /* DissentOrderParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2311651E5ED7220042E742 /* DissentOrderParam.m */; };
 		7C23116C1E5ED8190042E742 /* DissentOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */; };
 		7C2C42521E4B0E7700BA8E21 /* libToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2C42511E4B0E7700BA8E21 /* libToast.a */; };
+		7C3BBB0A1E76271400FC3C44 /* ProfitsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BBB091E76271400FC3C44 /* ProfitsParam.m */; };
+		7C3BBB0D1E7627F300FC3C44 /* ProfitsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BBB0C1E7627F300FC3C44 /* ProfitsEntity.m */; };
 		7C4786741E727435005518D5 /* AppListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4786731E727435005518D5 /* AppListViewModel.m */; };
 		7C5AAC341E5D23A50032AC64 /* PayDissentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */; };
 		7C5AAC351E5D23A50032AC64 /* PayDissentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */; };
@@ -443,6 +445,13 @@
 		7CA6BE1B1E5C43EF007704B9 /* ServerTimeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BE1A1E5C43EF007704B9 /* ServerTimeParam.m */; };
 		7CA6BE1E1E5C4523007704B9 /* ServerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BE1D1E5C4523007704B9 /* ServerViewModel.m */; };
 		7CA6BE241E5C52F5007704B9 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BE231E5C52F5007704B9 /* AppUtil.m */; };
+		7CAA28781E9F12F30075B9A5 /* PatchGetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA28771E9F12F30075B9A5 /* PatchGetParam.m */; };
+		7CAA287B1E9F13720075B9A5 /* PatchGetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA287A1E9F13720075B9A5 /* PatchGetEntity.m */; };
+		7CAA28871E9F1FC40075B9A5 /* PatchgetPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA28861E9F1FC40075B9A5 /* PatchgetPersistance.m */; };
+		7CAA288C1E9F51760075B9A5 /* StockPackageAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA288B1E9F51760075B9A5 /* StockPackageAspect.m */; };
+		7CAA28921E9F5C1A0075B9A5 /* StockPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA28911E9F5C1A0075B9A5 /* StockPersistance.m */; };
+		7CAA28951E9F708F0075B9A5 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAA28931E9F6CF90075B9A5 /* libFMDB.a */; };
+		7CAA28971E9F70CE0075B9A5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAA28961E9F70CE0075B9A5 /* libsqlite3.tbd */; };
 		7CC726371E6930EB0038A3EF /* MyStrategyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC726361E6930EB0038A3EF /* MyStrategyViewModel.m */; };
 		7CC7263A1E6932900038A3EF /* MyAllListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC726391E6932900038A3EF /* MyAllListEntity.m */; };
 		7CC7263D1E6934740038A3EF /* MyAllListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC7263C1E6934740038A3EF /* MyAllListParam.m */; };
@@ -513,6 +522,10 @@
 		7C23116A1E5ED8190042E742 /* DissentOrderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DissentOrderEntity.h; sourceTree = "<group>"; };
 		7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DissentOrderEntity.m; sourceTree = "<group>"; };
 		7C2C42511E4B0E7700BA8E21 /* libToast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libToast.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/Toast/libToast.a"; sourceTree = "<group>"; };
+		7C3BBB081E76271400FC3C44 /* ProfitsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfitsParam.h; sourceTree = "<group>"; };
+		7C3BBB091E76271400FC3C44 /* ProfitsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfitsParam.m; sourceTree = "<group>"; };
+		7C3BBB0B1E7627F300FC3C44 /* ProfitsEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfitsEntity.h; sourceTree = "<group>"; };
+		7C3BBB0C1E7627F300FC3C44 /* ProfitsEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfitsEntity.m; sourceTree = "<group>"; };
 		7C4786721E727435005518D5 /* AppListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListViewModel.h; sourceTree = "<group>"; };
 		7C4786731E727435005518D5 /* AppListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListViewModel.m; sourceTree = "<group>"; };
 		7C5AAC311E5D23A50032AC64 /* PayDissentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDissentViewController.h; sourceTree = "<group>"; };
@@ -969,6 +982,18 @@
 		7CA6BE1D1E5C4523007704B9 /* ServerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewModel.m; sourceTree = "<group>"; };
 		7CA6BE221E5C52F5007704B9 /* AppUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtil.h; sourceTree = "<group>"; };
 		7CA6BE231E5C52F5007704B9 /* AppUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtil.m; sourceTree = "<group>"; };
+		7CAA286A1E9F10660075B9A5 /* StockPackageAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPackageAspect.h; sourceTree = "<group>"; };
+		7CAA28761E9F12F30075B9A5 /* PatchGetParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchGetParam.h; sourceTree = "<group>"; };
+		7CAA28771E9F12F30075B9A5 /* PatchGetParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchGetParam.m; sourceTree = "<group>"; };
+		7CAA28791E9F13720075B9A5 /* PatchGetEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchGetEntity.h; sourceTree = "<group>"; };
+		7CAA287A1E9F13720075B9A5 /* PatchGetEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchGetEntity.m; sourceTree = "<group>"; };
+		7CAA28851E9F1FC40075B9A5 /* PatchgetPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchgetPersistance.h; sourceTree = "<group>"; };
+		7CAA28861E9F1FC40075B9A5 /* PatchgetPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchgetPersistance.m; sourceTree = "<group>"; };
+		7CAA288B1E9F51760075B9A5 /* StockPackageAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPackageAspect.m; sourceTree = "<group>"; };
+		7CAA28901E9F5C1A0075B9A5 /* StockPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPersistance.h; sourceTree = "<group>"; };
+		7CAA28911E9F5C1A0075B9A5 /* StockPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPersistance.m; sourceTree = "<group>"; };
+		7CAA28931E9F6CF90075B9A5 /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFMDB.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/FMDB/libFMDB.a"; sourceTree = "<group>"; };
+		7CAA28961E9F70CE0075B9A5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7CC726351E6930EB0038A3EF /* MyStrategyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStrategyViewModel.h; sourceTree = "<group>"; };
 		7CC726361E6930EB0038A3EF /* MyStrategyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStrategyViewModel.m; sourceTree = "<group>"; };
 		7CC726381E6932900038A3EF /* MyAllListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAllListEntity.h; sourceTree = "<group>"; };
@@ -999,6 +1024,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CAA28971E9F70CE0075B9A5 /* libsqlite3.tbd in Frameworks */,
+				7CAA28951E9F708F0075B9A5 /* libFMDB.a in Frameworks */,
 				7C6FE2F71E67C60300A9F8D1 /* libMJRefresh.a in Frameworks */,
 				7CFFE35F1E4C4449001AFD72 /* libOpenUDID.a in Frameworks */,
 				7CFFE35D1E4C4437001AFD72 /* libSDWebImage.a in Frameworks */,
@@ -1095,6 +1122,8 @@
 		7C1230131E309A44009193A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7CAA28961E9F70CE0075B9A5 /* libsqlite3.tbd */,
+				7CAA28931E9F6CF90075B9A5 /* libFMDB.a */,
 				7C6FE2F61E67C60300A9F8D1 /* libMJRefresh.a */,
 				7C6C75EC1E5434770085947B /* libMJRefresh.a */,
 				7CFFE35E1E4C4449001AFD72 /* libOpenUDID.a */,
@@ -1838,6 +1867,10 @@
 		7CA6BDB01E5C153A007704B9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7CAA28791E9F13720075B9A5 /* PatchGetEntity.h */,
+				7CAA287A1E9F13720075B9A5 /* PatchGetEntity.m */,
+				7C3BBB0B1E7627F300FC3C44 /* ProfitsEntity.h */,
+				7C3BBB0C1E7627F300FC3C44 /* ProfitsEntity.m */,
 				7CC726381E6932900038A3EF /* MyAllListEntity.h */,
 				7CC726391E6932900038A3EF /* MyAllListEntity.m */,
 				7C23116A1E5ED8190042E742 /* DissentOrderEntity.h */,
@@ -1863,6 +1896,8 @@
 		7CA6BDB91E5C153A007704B9 /* Param */ = {
 			isa = PBXGroup;
 			children = (
+				7C3BBB081E76271400FC3C44 /* ProfitsParam.h */,
+				7C3BBB091E76271400FC3C44 /* ProfitsParam.m */,
 				7CC7263B1E6934740038A3EF /* MyAllListParam.h */,
 				7CC7263C1E6934740038A3EF /* MyAllListParam.m */,
 				7C2311641E5ED7220042E742 /* DissentOrderParam.h */,
@@ -1885,6 +1920,8 @@
 				7CA6BDC51E5C153A007704B9 /* UserInfoParam.m */,
 				7CA6BDC61E5C153A007704B9 /* VerifySecurityCodeParam.h */,
 				7CA6BDC71E5C153A007704B9 /* VerifySecurityCodeParam.m */,
+				7CAA28761E9F12F30075B9A5 /* PatchGetParam.h */,
+				7CAA28771E9F12F30075B9A5 /* PatchGetParam.m */,
 			);
 			path = Param;
 			sourceTree = "<group>";
@@ -1894,6 +1931,10 @@
 			children = (
 				7CA6BDC91E5C153A007704B9 /* UserPersistance.h */,
 				7CA6BDCA1E5C153A007704B9 /* UserPersistance.m */,
+				7CAA28851E9F1FC40075B9A5 /* PatchgetPersistance.h */,
+				7CAA28861E9F1FC40075B9A5 /* PatchgetPersistance.m */,
+				7CAA28901E9F5C1A0075B9A5 /* StockPersistance.h */,
+				7CAA28911E9F5C1A0075B9A5 /* StockPersistance.m */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -1946,6 +1987,8 @@
 			children = (
 				7CA6BDF21E5C159E007704B9 /* LoginAspect.h */,
 				7CA6BDF31E5C159E007704B9 /* LoginAspect.m */,
+				7CAA286A1E9F10660075B9A5 /* StockPackageAspect.h */,
+				7CAA288B1E9F51760075B9A5 /* StockPackageAspect.m */,
 			);
 			path = Aspect;
 			sourceTree = "<group>";
@@ -2473,6 +2516,7 @@
 				7CA6BDFF1E5C23F4007704B9 /* PayDetailViewModel.m in Sources */,
 				7C122FE11E30995D009193A6 /* main.m in Sources */,
 				7C0A521A1E715DAF00A04F6C /* ProfitsViewModel.m in Sources */,
+				7C3BBB0A1E76271400FC3C44 /* ProfitsParam.m in Sources */,
 				7CA6BDD61E5C153A007704B9 /* AppParam.m in Sources */,
 				7CA6BDD81E5C153A007704B9 /* AppViewModel.m in Sources */,
 				7CA6BDE61E5C153A007704B9 /* LoginParam.m in Sources */,
@@ -2480,18 +2524,21 @@
 				7CA6BE1B1E5C43EF007704B9 /* ServerTimeParam.m in Sources */,
 				7CA6BDED1E5C153A007704B9 /* PaySection.m in Sources */,
 				7C5AAC341E5D23A50032AC64 /* PayDissentViewController.m in Sources */,
+				7CAA28871E9F1FC40075B9A5 /* PatchgetPersistance.m in Sources */,
 				7CA6BDF41E5C159E007704B9 /* LoginAspect.m in Sources */,
 				7CC726461E693A5F0038A3EF /* EmptyListSection.m in Sources */,
 				7CA6BDE81E5C153A007704B9 /* SecuritycodePicParam.m in Sources */,
 				7CC7263D1E6934740038A3EF /* MyAllListParam.m in Sources */,
 				7CC726411E6938360038A3EF /* MyStrategySection.m in Sources */,
 				7CA6BDE91E5C153A007704B9 /* SettlementsParam.m in Sources */,
+				7C3BBB0D1E7627F300FC3C44 /* ProfitsEntity.m in Sources */,
 				7CA6BE181E5C438E007704B9 /* ServerTimeEntity.m in Sources */,
 				7CA6BDEA1E5C153A007704B9 /* UserInfoParam.m in Sources */,
 				7CCCD3D71E5FDD4D00C12D75 /* MineViewController.m in Sources */,
 				7CA6BDE21E5C153A007704B9 /* LoginEntity.m in Sources */,
 				7CA6BDE11E5C153A007704B9 /* DoSettleEntity.m in Sources */,
 				7CA6BDDD1E5C153A007704B9 /* LoginViewController.m in Sources */,
+				7CAA287B1E9F13720075B9A5 /* PatchGetEntity.m in Sources */,
 				7CA6BDD51E5C153A007704B9 /* UIView+SimpleMakeToast.m in Sources */,
 				7CA6BE081E5C26F9007704B9 /* PayDetailSection.m in Sources */,
 				7CA6BDD71E5C153A007704B9 /* AppViewController.m in Sources */,
@@ -2502,6 +2549,7 @@
 				7CA6BDD91E5C153A007704B9 /* IndexViewController.m in Sources */,
 				7CA6BDEC1E5C153A007704B9 /* UserPersistance.m in Sources */,
 				7C2311661E5ED7220042E742 /* DissentOrderParam.m in Sources */,
+				7CAA28921E9F5C1A0075B9A5 /* StockPersistance.m in Sources */,
 				7CCCD3D21E5FDA6400C12D75 /* HomeViewController.m in Sources */,
 				7CA6BDEF1E5C153A007704B9 /* LoginViewModel.m in Sources */,
 				7CA6BDE31E5C153A007704B9 /* SettlementsEntity.m in Sources */,
@@ -2520,6 +2568,8 @@
 				7CA6BE031E5C24AB007704B9 /* PayDetailViewController.m in Sources */,
 				7CA6BDE71E5C153A007704B9 /* PreReadMassMsgParam.m in Sources */,
 				7CA6BDE41E5C153A007704B9 /* UserInfoEntity.m in Sources */,
+				7CAA28781E9F12F30075B9A5 /* PatchGetParam.m in Sources */,
+				7CAA288C1E9F51760075B9A5 /* StockPackageAspect.m in Sources */,
 				7CA6BDE51E5C153A007704B9 /* DoSettleParam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2670,6 +2720,7 @@
 					../RACFrame/RACFrame/RFPersistance,
 				);
 				INFOPLIST_FILE = RACTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/**";
 				OTHER_LDFLAGS = "-ObjC";
@@ -2693,6 +2744,7 @@
 					../RACFrame/RACFrame/RFPersistance,
 				);
 				INFOPLIST_FILE = RACTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/**";
 				OTHER_LDFLAGS = "-ObjC";

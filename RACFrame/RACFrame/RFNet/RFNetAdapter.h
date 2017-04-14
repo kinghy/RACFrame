@@ -102,6 +102,8 @@
 
 -(id)parseJson:(id)dict byKey:(NSString*)key;
 
+-(id)formatJson:(id)dict;
+
 @end
 
 

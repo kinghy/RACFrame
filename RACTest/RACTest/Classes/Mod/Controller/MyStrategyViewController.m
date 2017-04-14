@@ -11,6 +11,7 @@
 #import "MyStrategySection.h"
 #import "EmptyListSection.h"
 #import "MyAllListEntity.h"
+#import "ProfitsEntity.h"
 
 @interface MyStrategyViewController ()<UIScrollViewDelegate,RFTableDelegate,RFRefreshDelegate>{
     int _tab;
@@ -102,8 +103,9 @@
     [self.btnArray.rac_sequence.signal subscribeNext:^(id x) {
         RACTupleUnpack(UIButton* curBtn,UITableView* curTable,MyStrategyViewModel* model) = x;
         @strongify(self)
+        @weakify(curTable)
         [model.dataSource.errorsSignal subscribeNext:^(NSError* error) {
-            @strongify(self)
+            @strongify(self,curTable)
             [self.view makeQuickToast:error.userInfo[kErrorMsg]];
             [curTable endHeaderRefreshing];
             [curTable endFooterRefreshingWithNoMoreData:NO];
@@ -111,7 +113,7 @@
         }];
         [curTable bindDataSource:model.dataSource.recordsSignal withSection:[MyStrategySection class] andEmptySection:[EmptyListSection class]];
         [model.dataSource.recordsSignal subscribeNext:^(id x) {
-            @strongify(self)
+             @strongify(self,curTable)
             [curTable endHeaderRefreshing];
             [curTable endFooterRefreshingWithNoMoreData:NO];
             [self.view hideWaiting];
@@ -249,45 +251,45 @@
             s.frame = rect;
             s.investerView.hidden = NO;
         }
-//        if (e.profitEntity ) {
-//            if (e.profitEntity.state.intValue >= 500) {//已平仓
-//                CGRect rect = s.frame;
-//                rect.size.height = 135;
-//                s.frame = rect;
-//                s.investerView.hidden = NO;
-//                
-//                s.nowpriceLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.sell_deal_price_avg.doubleValue];
-//                //18卖出
-//                s.priceLabel.text = @"卖出价格";
-//                //待添加
-//                s.profitLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.profit.doubleValue];
-//                s.rateLabel.text = e.profitEntity.profit.floatValue >= 0?@"盈利":@"亏损";
-//                s.profitLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
-//                s.rateLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
-//            }
-//            else if (e.profitEntity.state.intValue < 500) {//待平仓
-//                CGRect rect = s.frame;
-//                rect.size.height = 135;
-//                s.frame = rect;
-//                s.investerView.hidden = NO;
-//                s.nowpriceLabel.textColor = kTitleColor;
-//                s.nowpriceLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.cur_price.doubleValue];
-//                s.profitLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.profit.doubleValue];
-//                s.rateLabel.text = [NSString stringWithFormat:@"%.2f%%", e.profitEntity.profit_rate.doubleValue * 100];
-//                s.profitLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
-//                s.rateLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
-//                
-//                if ([e.profitEntity.state isEqualToString:@"201"]) {//T日
-//                    s.priceLabel.text = [NSString stringWithFormat:@"%.2f买入", e.profitEntity.buy_deal_price_avg.doubleValue];
-//                }else{
-//                    if (e.profitEntity.profit.intValue >= 0) {//盈利
-//                        s.priceLabel.text = [NSString stringWithFormat:@"%.2f止盈", e.profitEntity.sell_win_price.doubleValue];
-//                    }else{//亏损
-//                        s.priceLabel.text = [NSString stringWithFormat:@"%.2f止损", e.profitEntity.sell_loss_price.doubleValue];
-//                    }
-//                }
-//            }
-//        }else{
+        if (e.profitEntity ) {
+            if (e.profitEntity.state.intValue >= 500) {//已平仓
+                CGRect rect = s.frame;
+                rect.size.height = 135;
+                s.frame = rect;
+                s.investerView.hidden = NO;
+                
+                s.nowpriceLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.sell_deal_price_avg.doubleValue];
+                //18卖出
+                s.priceLabel.text = @"卖出价格";
+                //待添加
+                s.profitLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.profit.doubleValue];
+                s.rateLabel.text = e.profitEntity.profit.floatValue >= 0?@"盈利":@"亏损";
+                s.profitLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
+                s.rateLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
+            }
+            else if (e.profitEntity.state.intValue < 500) {//待平仓
+                CGRect rect = s.frame;
+                rect.size.height = 135;
+                s.frame = rect;
+                s.investerView.hidden = NO;
+                s.nowpriceLabel.textColor = kTextMainColor;
+                s.nowpriceLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.cur_price.doubleValue];
+                s.profitLabel.text = [NSString stringWithFormat:@"%.2f", e.profitEntity.profit.doubleValue];
+                s.rateLabel.text = [NSString stringWithFormat:@"%.2f%%", e.profitEntity.profit_rate.doubleValue * 100];
+                s.profitLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
+                s.rateLabel.textColor = [AppUtil colorWithProfit:e.profitEntity.profit.doubleValue];
+                
+                if ([e.profitEntity.state isEqualToString:@"201"]) {//T日
+                    s.priceLabel.text = [NSString stringWithFormat:@"%.2f买入", e.profitEntity.buy_deal_price_avg.doubleValue];
+                }else{
+                    if (e.profitEntity.profit.intValue >= 0) {//盈利
+                        s.priceLabel.text = [NSString stringWithFormat:@"%.2f止盈", e.profitEntity.sell_win_price.doubleValue];
+                    }else{//亏损
+                        s.priceLabel.text = [NSString stringWithFormat:@"%.2f止损", e.profitEntity.sell_loss_price.doubleValue];
+                    }
+                }
+            }
+        }else{
             s.nowpriceLabel.text = @"— —";
             s.profitLabel.text = @"— —";
             s.rateLabel.text = @"— —";
@@ -297,7 +299,7 @@
             s.profitLabel.textColor = textColor;
             s.rateLabel.textColor = textColor;
             s.priceLabel.textColor = textColor;
-//        }
+        }
     }
 }
 #pragma mark - Action methods

@@ -121,6 +121,10 @@
     if ([ent isKindOfClass:cls]) {
         if (cls != [NSObject class]) {
             if([json isKindOfClass:[NSDictionary class]]){
+                if ([ent conformsToProtocol:@protocol(IRFEntity)] && [ent respondsToSelector:@selector(formatJson:)]) {
+                    json = [(id<IRFEntity>)ent formatJson:json];
+                }
+
                 //定义类属性的数量
                 unsigned propertyCount;
                 //获取对象的全部属性并循环显示属性名称和属性特性参数

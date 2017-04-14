@@ -16,11 +16,14 @@
 }
 - (IBAction)backClicked:(id)sender;
 
+- (IBAction)switchUserClicked:(id)sender;
+
 @end
 
 @implementation LoginAgainViewController
 
 - (void)viewDidLoad {
+    _user = [UserViewModel sharedInstance];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     // Do any additional setup after loading the view from its nib.
@@ -35,7 +38,7 @@
     //默认收起验证框
     [self.verifyView setHidden:YES];
     
-    _user = [UserViewModel sharedInstance];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +77,7 @@
 
 -(void)formatView{
     
-    self.phoneLabel.text = _user.phone_num;
+    self.phoneLabel.text = _user.bind_mobile;
     
     [self.password setSecureTextEntry:YES];//密文
     self.password.placeholder = @"密码";
@@ -138,6 +141,13 @@
 #pragma mark - Action methods
 - (IBAction)backClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)switchUserClicked:(id)sender {
+    [_user logout];
+    [self.navigationController popViewControllerAnimated:NO];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kGlobalLogin object:nil];
+    
 }
 
 #pragma mark - get/set methods

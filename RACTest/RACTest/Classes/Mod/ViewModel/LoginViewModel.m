@@ -112,6 +112,7 @@
         if([x isKindOfClass:[LoginEntity class]]){
             LoginEntity* l = (LoginEntity*)x;
             [self.user update];
+            self.user.phone_num = self.phoneNum;
             self.user.uid = l.uid;
             self.user.session_id = l.session_id;
             [self.user save];

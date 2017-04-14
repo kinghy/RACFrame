@@ -20,6 +20,7 @@
 }
 
 -(void)refresh:(RACSignal *)arraySignal andClear:(BOOL)clear{
+
     @weakify(self);
     [arraySignal subscribeNext:^(NSArray *x) {
         @strongify(self);

@@ -37,6 +37,7 @@
 		7C9440FF1E519930003DC865 /* RFDefaultsPersistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9440FE1E519930003DC865 /* RFDefaultsPersistManager.m */; };
 		7CA6BE0C1E5C3605007704B9 /* UIBarButtonItem+RF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BE0B1E5C3605007704B9 /* UIBarButtonItem+RF.m */; };
 		7CA6BE0F1E5C370B007704B9 /* UIViewController+Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BE0E1E5C370B007704B9 /* UIViewController+Nav.m */; };
+		7CAA288F1E9F53060075B9A5 /* RFDBPersistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA288E1E9F53060075B9A5 /* RFDBPersistManager.m */; };
 		7CB124411E567CEF003B5944 /* UITableView+RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB124401E567CEF003B5944 /* UITableView+RFUI.m */; };
 		7CB124471E56888D003B5944 /* RFTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB124461E56888D003B5944 /* RFTableAdapter.m */; };
 		7CB1244A1E568E1A003B5944 /* RFSectionBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB124491E568E1A003B5944 /* RFSectionBox.m */; };
@@ -140,6 +141,8 @@
 		7CA6BE0B1E5C3605007704B9 /* UIBarButtonItem+RF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RF.m"; sourceTree = "<group>"; };
 		7CA6BE0D1E5C370B007704B9 /* UIViewController+Nav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Nav.h"; sourceTree = "<group>"; };
 		7CA6BE0E1E5C370B007704B9 /* UIViewController+Nav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Nav.m"; sourceTree = "<group>"; };
+		7CAA288D1E9F53060075B9A5 /* RFDBPersistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFDBPersistManager.h; sourceTree = "<group>"; };
+		7CAA288E1E9F53060075B9A5 /* RFDBPersistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDBPersistManager.m; sourceTree = "<group>"; };
 		7CB1243F1E567CEF003B5944 /* UITableView+RFUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+RFUI.h"; sourceTree = "<group>"; };
 		7CB124401E567CEF003B5944 /* UITableView+RFUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RFUI.m"; sourceTree = "<group>"; };
 		7CB124451E56888D003B5944 /* RFTableAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTableAdapter.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				7C9441011E51AA9C003DC865 /* RFDefaultsPersistManager.h */,
 				7C9440FE1E519930003DC865 /* RFDefaultsPersistManager.m */,
 				7C9441001E51A129003DC865 /* IRFPersistManager.h */,
+				7CAA288D1E9F53060075B9A5 /* RFDBPersistManager.h */,
+				7CAA288E1E9F53060075B9A5 /* RFDBPersistManager.m */,
 			);
 			path = RFPersistance;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 				7C55DE3E1E4D97D100A69D8B /* RFAspectsManager+AppDelegate.m in Sources */,
 				7C55DE441E4D97D100A69D8B /* RFPersistance.m in Sources */,
 				7C23115D1E5EB0090042E742 /* UITextField+Format.m in Sources */,
+				7CAA288F1E9F53060075B9A5 /* RFDBPersistManager.m in Sources */,
 				7C55DE3D1E4D97D100A69D8B /* RFAspect.m in Sources */,
 				7C2311631E5EBF4B0042E742 /* NSString+RFValidate.m in Sources */,
 				7C55DE4A1E4D97D100A69D8B /* UIView+RFKeyBoard.m in Sources */,

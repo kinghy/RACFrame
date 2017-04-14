@@ -51,6 +51,11 @@ static NSRecursiveLock *persistancLock;//递归锁
     _persistanceDict = [_manager dictByClass:[self class] andTag:_persistanceTag];
 }
 
+-(void)remove{
+    [_manager removeByPersistance:self];
+    [self refresh];
+}
+
 -(void)commit{
     [_manager saveByPersistance:self];
 }

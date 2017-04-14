@@ -59,6 +59,7 @@
 -(BOOL)removeByPersistance:(RFPersistance *)persistance{
     NSString *tagName = [NSString stringWithFormat:@"%@@@%@",[[persistance class] description],persistance.persistanceTag];
     [_userDefaults removeObjectForKey:tagName];
+    [_userDefaults synchronize];
     return YES;
 }
 

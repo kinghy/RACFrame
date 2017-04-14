@@ -5,7 +5,7 @@
 //  Created by chenyi on 16/6/27.
 //  Copyright © 2016年 JYZD. All rights reserved.
 //
-
+@class ProfitsRecordsEntity;
 @interface MyAllListEntity : NSObject<IRFEntity>
 
 @property(nonatomic,strong)NSArray *records;
@@ -41,5 +41,6 @@
 
 @property(nonatomic,strong)NSString *	sub_type	;
 
+@property(nonatomic,strong)ProfitsRecordsEntity *	profitEntity	;
 
 @end

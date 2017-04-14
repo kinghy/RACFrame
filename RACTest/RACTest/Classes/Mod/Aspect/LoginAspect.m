@@ -26,14 +26,16 @@
 
 -(void)login{
     AppDelegate *d = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [d.rootViewController pushViewController:[LoginViewController controllerWithViewModel:[LoginViewModel new]] animated:YES];
-
+    if (![[d.rootViewController.navigationController.viewControllers lastObject] isKindOfClass:[LoginViewController class]]) {
+        [d.rootViewController pushViewController:[LoginViewController controllerWithViewModel:[LoginViewModel new]] animated:YES];
+    }
 }
 
 -(void)loginAgain{
     AppDelegate *d = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [d.rootViewController pushViewController:[LoginAgainViewController controllerWithViewModel:[LoginViewModel new]] animated:YES];
-    
+    if (![[d.rootViewController.navigationController.viewControllers lastObject] isKindOfClass:[LoginAgainViewController class]]) {
+        [d.rootViewController pushViewController:[LoginAgainViewController controllerWithViewModel:[LoginViewModel new]] animated:YES];
+    }
 }
 
 @end

@@ -8,11 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+//AOP注册宏
+#define Describe_PropertyName(...) \
+dynamic __VA_ARGS__ ;\
+Function_PropertyName(__VA_ARGS__)\
+\
+
+#define Function_PropertyName(...)\
+-(NSArray*)getPropertyNames{\
+    return [@#__VA_ARGS__ componentsSeparatedByString:@","];\
+}\
+\
+
+
 /**
- 本地持久化基类，需要持久化的类继承子类并把所有持久化属性设置为@dynamic
+ 本地持久化基类，需要持久化的类继承子类并把所有持久化属性设置为@dynamic并可使用@Describe_PropertyName宏标注所有属性名称（数据库持久化中必须使用）
  所有子类都应该调用initFromLocalWithTag:或者initWithTag:andDeadLine:进行初始化
  */
 @interface RFPersistance : NSObject
+
 @property (strong,nonatomic,readonly)NSString* persistanceTag;
 @property (strong,nonatomic,readonly)NSMutableDictionary* persistanceDict;
 @property (weak,nonatomic,readonly) id<IRFPersistManager> manager;
@@ -42,9 +56,19 @@
  */
 -(void)refresh;
 
+-(void)remove;
+
 /**
  提交当前对象的改变
  */
 -(void)commit;
+
+
+/**
+ 获取当前持久对象的所有属性名字，可以使用@Describe_PropertyName来快速完成
+
+ @return 返回所有属性的名称
+ */
+-(NSArray*)getPropertyNames;
 
 @end

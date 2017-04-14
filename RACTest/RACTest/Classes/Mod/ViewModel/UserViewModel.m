@@ -51,6 +51,11 @@
     
 }
 
+-(void)logout{
+    [_user remove];
+    [self update];
+}
+
 -(void)save{
     _user.uid = self.uid;
     _user.nick_name = self.nick_name;

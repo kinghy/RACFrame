@@ -10,7 +10,6 @@
 
 @interface AppListViewModel : AppViewModel
 @property (nonatomic,strong) RFDataSource* dataSource;
-
 /**
  更新，子类必须实现
  */

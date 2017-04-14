@@ -14,6 +14,7 @@
 
 -(void)update;
 -(void)save;
+-(void)logout;
 -(BOOL)hasLogin;
 
 @property(strong,nonatomic)NSString* uid;
