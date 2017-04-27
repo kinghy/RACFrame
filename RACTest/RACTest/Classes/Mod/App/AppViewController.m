@@ -20,7 +20,7 @@
     [self leftBackBtnWithIcon:@"nav_back" highlightedIcon:@"nav_back"];
     [self formatView];
     [self bindViewModel];
-    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = NO;//解决导航栏遮挡页面的问题
 }
 
 - (void)didReceiveMemoryWarning {

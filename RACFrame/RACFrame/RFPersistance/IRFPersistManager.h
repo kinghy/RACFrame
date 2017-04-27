@@ -20,7 +20,7 @@
  */
 -(RFPersistance*)persistanceByClass:(Class)clss andTag:(NSString *)tag;
 
--(NSArray<RFPersistance*>*)persistancesByClass:(Class)clss andFilte:(NSDictionary *)filtes;
+-(NSArray<RFPersistance*>*)persistancesByClass:(Class)clss andQuery:(NSString*)query;
 
 /**
  根据类名、tag从本地持久化中获取NSMutableDictionary实例,如果没有在本地持久化中找到相应的存储对象则返回一个新建的NSMutableDictionary实例。

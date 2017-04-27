@@ -36,7 +36,6 @@ Function_PropertyName(__VA_ARGS__)\
 -(instancetype)initWithDict:(NSMutableDictionary*)dict andTag:(NSString*)tag andManager:(id<IRFPersistManager>)manager;
 
 
-
 ///**
 // 为当前对象加锁，此方法保证了接下来操作的原子性，理论上所有对持久对象的写操作都应该先调用此方法，以下所有操作都是线程安全的，请在使用完成后调用uolockWithCommit:关闭锁
 //
@@ -71,4 +70,11 @@ Function_PropertyName(__VA_ARGS__)\
  */
 -(NSArray*)getPropertyNames;
 
+
+/**
+ 根据字符串名称获取持久对象的对应值
+ 
+ @return 返回所有值
+ */
+-(NSString*)valueByName:(NSString*)name;
 @end

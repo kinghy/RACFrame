@@ -12,6 +12,7 @@
 #import "HomeViewController.h"
 #import "PayViewModel.h"
 #import "UserViewModel.h"
+#import "STOSearchViewController.h"
 
 #define kDockItemHome 0
 #define kDockItemPublish 1
@@ -34,7 +35,7 @@
     hc.tabBarItem.image=[UIImage imageNamed:@"tab_1"];
     hc.tabBarItem.tag = kDockItemHome;
     
-    UINavigationController *bc = [[UINavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+    UINavigationController *bc = [[UINavigationController alloc] initWithRootViewController:[[STOSearchViewController alloc] init]];
     bc.tabBarItem.title=@"建策略";
     bc.tabBarItem.image=[UIImage imageNamed:@"tab_2"];
     bc.tabBarItem.tag = kDockItemPublish;

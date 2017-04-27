@@ -35,6 +35,9 @@
  */
 -(RFPersistance *)persistanceByClass:(Class)clss andTag:(NSString *)tag;
 
+-(NSArray<RFPersistance*>*)persistancesByClass:(Class)clss andQuery:(NSString*)query;
+
+
 /**
  UserDefaults不提供条件检索
  

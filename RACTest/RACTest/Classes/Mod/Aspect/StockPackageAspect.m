@@ -28,15 +28,15 @@
             PatchgetPersistance *p = (PatchgetPersistance*)[[RFDefaultsPersistManager sharedInstace] persistanceByClass:[PatchgetPersistance class] andTag:kStockPathgetPersistanceKey];
             
             NSString *version = [NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"version"]];
-//            if(![version isEqualToString:p.version]){
-//                p.name=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"name"]];
-//                p.version=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"version"]];
-//                p.create_time=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"create_time"]];
-//                p.flag=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"flag"]];
-//                p.url=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"url"]];
-//                [p commit];
+            if(![version isEqualToString:p.version]){
+                p.name=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"name"]];
+                p.version=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"version"]];
+                p.create_time=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"create_time"]];
+                p.flag=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"flag"]];
+                p.url=[NSString stringWithFormat:@"%@",[e.res_data objectForKey:@"url"]];
+                [p commit];
                 [self getStockPackage:p.url];
-//            }
+            }
         }
     }];
 }
@@ -50,7 +50,7 @@
             NSArray *dataArray = (NSArray *)jsonData;
             NSMutableArray *pArray = [NSMutableArray array];
             for(NSDictionary *dict in dataArray){
-                StockPersistance* stock = [StockPersistance new];
+                StockPersistance *stock = (StockPersistance*)[[RFDBPersistManager sharedInstace] persistanceByClass:[StockPersistance class] andTag:nil];
                 stock.ID = [NSString stringWithFormat:@"%@",[dict objectForKey:@"id"]];
                 stock.code = [NSString stringWithFormat:@"%@",[dict objectForKey:@"code"]];//String	600129
                 stock.name = [NSString stringWithFormat:@"%@",[dict objectForKey:@"name"]];//String	太极集团

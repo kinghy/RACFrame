@@ -45,6 +45,34 @@
     return p;
 }
 
+
+-(NSArray<RFPersistance*>*)persistancesByClass:(Class)clss andQuery:(NSString*)query{
+    NSMutableArray<RFPersistance*>* array = [NSMutableArray<RFPersistance*> array];
+    if(query.length>0){
+        RFPersistance *p = [clss new];
+        NSString *str = [NSString stringWithFormat:@"select %@ from %@ where %@",[[p getPropertyNames] componentsJoinedByString:@","],[clss description],query];
+        [_fmdb open];
+        FMResultSet *set = [_fmdb executeQuery:str];
+        
+        while ([set next]) {
+            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+            for(NSString *key in [set resultDictionary].allKeys){
+                NSString *value = [NSString stringWithFormat:@"%@",[[set resultDictionary] objectForKey:key]];
+                NSString *keyNew = [key isEqualToString:@"id"]?@"ID":key;
+                [dict setObject:value forKey:keyNew];
+            }
+            RFPersistance *p = [[clss alloc] initWithDict:dict andTag:[clss description] andManager:self];
+            [array addObject:p];
+        }
+        [_fmdb close];
+    }
+    return array;
+}
+
+-(NSMutableDictionary *)dictByClass:(Class)clss andTag:(NSString *)tag{
+    return [NSMutableDictionary dictionary];
+}
+
 -(BOOL)saveByPersistanceArray:(NSArray<RFPersistance*> *)persistances{
     [_fmdb beginTransaction];
     for(RFPersistance* p in persistances){
@@ -52,20 +80,25 @@
         NSArray *propertyArray = [p getPropertyNames];
         [self checkTableByName:table andPropertyNames:propertyArray];
         NSMutableString *str = [NSMutableString string];
-        [str appendString:@"INSERT INTO temp "];
+        [str appendFormat:@"INSERT INTO %@ ",table];
         NSMutableString *strColumn = [NSMutableString stringWithString:@"("];
-        NSMutableString *strValue = [NSMutableString stringWithString:@"VALUES("];
+        NSMutableString *strValue = [NSMutableString stringWithString:@" VALUES("];
         for(int i=0; i < [propertyArray count];++i){
             NSString *property = propertyArray[i];
-            if(![[property lowercaseString] isEqualToString:@"id"]){
-                123123
+            if(![[property lowercaseString] isEqualToString:@"id"] && [p valueByName:property]){
+                if(strColumn.length>1){
+                    [strColumn appendString:@","];
+                    [strValue appendString:@","];
+                }
+                [strColumn appendFormat:@"%@",property];
+                [strValue appendFormat:@"\"%@\"",[p valueByName:property]];
             }
-            @"INSERT INTO temp (stock_code,stock_name,stock_abbr,code_shsz,shsz,stock_kind) VALUES(?,?,?,?,?,?)",obj[@"code"],obj[@"name"],obj[@"abbr"],obj[@"code_shsz"],obj[@"shsz"],obj[@"stock_kind"]];
         }
         [strColumn appendString:@")"];
         [strValue appendString:@")"];
-        
-
+        [str appendString:strColumn];
+        [str appendString:strValue];
+//        NSLog(str);
         [_fmdb executeUpdate:str];
         
     }

@@ -60,6 +60,9 @@ static NSRecursiveLock *persistancLock;//递归锁
     [_manager saveByPersistance:self];
 }
 
+-(NSString*)valueByName:(NSString*)name{
+    return [_persistanceDict objectForKey:name];
+}
 
 #pragma mark - private methods
 

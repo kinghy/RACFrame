@@ -8,6 +8,10 @@
 
 #import "RFPersistance.h"
 
+#define kStockFuzzyQuery(keywords)\
+[NSString stringWithFormat:@"code like '%%%@%%' or name like '%%%@%%' or abbr like '%%%@%%'",keywords,keywords,keywords]\
+
+
 @interface StockPersistance : RFPersistance
 
 @property(assign,nonatomic)NSString *ID	;//String	606463

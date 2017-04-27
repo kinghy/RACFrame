@@ -65,7 +65,7 @@
 
 -(void)bindViewModel{
     [self.payTableView rftableWithController:self andNibArray:@[@"PaySection",@"EmptyListSection"]];
-    [self.payTableView rfrefreshWithController:self andObject:_viewModel];
+    [self.payTableView rfrefreshWithController:self andObject:_viewModel];//开启上拉下拉刷新
     @weakify(self)
     [_viewModel.dataSource.errorsSignal subscribeNext:^(NSError* error) {
         @strongify(self)

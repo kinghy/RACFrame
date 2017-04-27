@@ -404,6 +404,8 @@
 		7C872BF31E49B5D100BADA96 /* user_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C872A821E49B5D000BADA96 /* user_setting@3x.png */; };
 		7C872BF41E49B5D100BADA96 /* user_tactic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C872A831E49B5D000BADA96 /* user_tactic@2x.png */; };
 		7C872BF51E49B5D100BADA96 /* user_tactic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C872A841E49B5D000BADA96 /* user_tactic@3x.png */; };
+		7C9479FD1EB178C700FFF7AD /* StockSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9479FC1EB178C700FFF7AD /* StockSection.m */; };
+		7C9479FF1EB178DA00FFF7AD /* StockSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9479FE1EB178DA00FFF7AD /* StockSection.xib */; };
 		7CA6BDD41E5C153A007704B9 /* UIButton+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD961E5C153A007704B9 /* UIButton+Corner.m */; };
 		7CA6BDD51E5C153A007704B9 /* UIView+SimpleMakeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD981E5C153A007704B9 /* UIView+SimpleMakeToast.m */; };
 		7CA6BDD61E5C153A007704B9 /* AppParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD9D1E5C153A007704B9 /* AppParam.m */; };
@@ -463,6 +465,9 @@
 		7CCCD3D31E5FDA6400C12D75 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D11E5FDA6400C12D75 /* HomeViewController.xib */; };
 		7CCCD3D71E5FDD4D00C12D75 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D51E5FDD4D00C12D75 /* MineViewController.m */; };
 		7CCCD3D81E5FDD4D00C12D75 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D61E5FDD4D00C12D75 /* MineViewController.xib */; };
+		7CDEDBA81EAF42D00014F9BA /* STOSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDEDBA61EAF42D00014F9BA /* STOSearchViewController.m */; };
+		7CDEDBA91EAF42D00014F9BA /* STOSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDEDBA71EAF42D00014F9BA /* STOSearchViewController.xib */; };
+		7CDEDBAC1EAF46740014F9BA /* STOSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */; };
 		7CFE2BBF1E320EF5000DB36F /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFE2BBE1E320EF5000DB36F /* libCocoaLumberjack.a */; };
 		7CFFE35D1E4C4437001AFD72 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFFE35C1E4C4437001AFD72 /* libSDWebImage.a */; };
 		7CFFE35F1E4C4449001AFD72 /* libOpenUDID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFFE35E1E4C4449001AFD72 /* libOpenUDID.a */; };
@@ -905,6 +910,9 @@
 		7C872A821E49B5D000BADA96 /* user_setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_setting@3x.png"; sourceTree = "<group>"; };
 		7C872A831E49B5D000BADA96 /* user_tactic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_tactic@2x.png"; sourceTree = "<group>"; };
 		7C872A841E49B5D000BADA96 /* user_tactic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_tactic@3x.png"; sourceTree = "<group>"; };
+		7C9479FB1EB178C700FFF7AD /* StockSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockSection.h; sourceTree = "<group>"; };
+		7C9479FC1EB178C700FFF7AD /* StockSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockSection.m; sourceTree = "<group>"; };
+		7C9479FE1EB178DA00FFF7AD /* StockSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockSection.xib; sourceTree = "<group>"; };
 		7CA6BD951E5C153A007704B9 /* UIButton+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Corner.h"; sourceTree = "<group>"; };
 		7CA6BD961E5C153A007704B9 /* UIButton+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Corner.m"; sourceTree = "<group>"; };
 		7CA6BD971E5C153A007704B9 /* UIView+SimpleMakeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SimpleMakeToast.h"; sourceTree = "<group>"; };
@@ -1012,6 +1020,11 @@
 		7CCCD3D41E5FDD4D00C12D75 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		7CCCD3D51E5FDD4D00C12D75 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		7CCCD3D61E5FDD4D00C12D75 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		7CDEDBA51EAF42D00014F9BA /* STOSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchViewController.h; sourceTree = "<group>"; };
+		7CDEDBA61EAF42D00014F9BA /* STOSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchViewController.m; sourceTree = "<group>"; };
+		7CDEDBA71EAF42D00014F9BA /* STOSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOSearchViewController.xib; sourceTree = "<group>"; };
+		7CDEDBAA1EAF46740014F9BA /* STOSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchViewModel.h; sourceTree = "<group>"; };
+		7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchViewModel.m; sourceTree = "<group>"; };
 		7CFE2BBE1E320EF5000DB36F /* libCocoaLumberjack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocoaLumberjack.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/CocoaLumberjack/libCocoaLumberjack.a"; sourceTree = "<group>"; };
 		7CFFE3581E4C42C1001AFD72 /* libOpenUDID.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenUDID.a; path = "/Users/rjt/GitHub/RACFrame/Pods/../build/Debug-iphoneos/OpenUDID/libOpenUDID.a"; sourceTree = "<absolute>"; };
 		7CFFE35A1E4C42C5001AFD72 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "/Users/rjt/GitHub/RACFrame/Pods/../build/Debug-iphoneos/SDWebImage/libSDWebImage.a"; sourceTree = "<absolute>"; };
@@ -1860,6 +1873,9 @@
 				7C6FE2F81E68121C00A9F8D1 /* MyStrategyViewController.h */,
 				7C6FE2F91E68121C00A9F8D1 /* MyStrategyViewController.m */,
 				7C6FE2FA1E68121C00A9F8D1 /* MyStrategyViewController.xib */,
+				7CDEDBA51EAF42D00014F9BA /* STOSearchViewController.h */,
+				7CDEDBA61EAF42D00014F9BA /* STOSearchViewController.m */,
+				7CDEDBA71EAF42D00014F9BA /* STOSearchViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1957,6 +1973,9 @@
 				7C0FAB851E656B4700654DF2 /* SetSection.h */,
 				7C0FAB861E656B4700654DF2 /* SetSection.m */,
 				7C0FAB881E656B5200654DF2 /* SetSection.xib */,
+				7C9479FB1EB178C700FFF7AD /* StockSection.h */,
+				7C9479FC1EB178C700FFF7AD /* StockSection.m */,
+				7C9479FE1EB178DA00FFF7AD /* StockSection.xib */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -1978,6 +1997,8 @@
 				7CC726361E6930EB0038A3EF /* MyStrategyViewModel.m */,
 				7C0A52181E715DAF00A04F6C /* ProfitsViewModel.h */,
 				7C0A52191E715DAF00A04F6C /* ProfitsViewModel.m */,
+				7CDEDBAA1EAF46740014F9BA /* STOSearchViewModel.h */,
+				7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2285,6 +2306,7 @@
 				7C872B971E49B5D100BADA96 /* user_contract@2x.png in Resources */,
 				7C872B1C1E49B5D000BADA96 /* empty@2x.png in Resources */,
 				7C872B321E49B5D100BADA96 /* mine_bg@2x.png in Resources */,
+				7C9479FF1EB178DA00FFF7AD /* StockSection.xib in Resources */,
 				7C872AC81E49B5D000BADA96 /* Keyboard-8@2x.png in Resources */,
 				7C872AEC1E49B5D000BADA96 /* tab_3_new@3x.png in Resources */,
 				7CA6BDDE1E5C153A007704B9 /* LoginViewController.xib in Resources */,
@@ -2361,6 +2383,7 @@
 				7C872B101E49B5D000BADA96 /* smal_on@3x.png in Resources */,
 				7C872BC41E49B5D100BADA96 /* buy@2x.png in Resources */,
 				7C872AAC1E49B5D000BADA96 /* item_arrow_o@2x.png in Resources */,
+				7CDEDBA91EAF42D00014F9BA /* STOSearchViewController.xib in Resources */,
 				7C872A891E49B5D000BADA96 /* btn_add@2x.png in Resources */,
 				7C872AED1E49B5D000BADA96 /* tab_3_s@2x.png in Resources */,
 				7C872AAF1E49B5D000BADA96 /* item_arrow_u@3x.png in Resources */,
@@ -2530,6 +2553,7 @@
 				7CA6BDE81E5C153A007704B9 /* SecuritycodePicParam.m in Sources */,
 				7CC7263D1E6934740038A3EF /* MyAllListParam.m in Sources */,
 				7CC726411E6938360038A3EF /* MyStrategySection.m in Sources */,
+				7CDEDBAC1EAF46740014F9BA /* STOSearchViewModel.m in Sources */,
 				7CA6BDE91E5C153A007704B9 /* SettlementsParam.m in Sources */,
 				7C3BBB0D1E7627F300FC3C44 /* ProfitsEntity.m in Sources */,
 				7CA6BE181E5C438E007704B9 /* ServerTimeEntity.m in Sources */,
@@ -2538,6 +2562,7 @@
 				7CA6BDE21E5C153A007704B9 /* LoginEntity.m in Sources */,
 				7CA6BDE11E5C153A007704B9 /* DoSettleEntity.m in Sources */,
 				7CA6BDDD1E5C153A007704B9 /* LoginViewController.m in Sources */,
+				7C9479FD1EB178C700FFF7AD /* StockSection.m in Sources */,
 				7CAA287B1E9F13720075B9A5 /* PatchGetEntity.m in Sources */,
 				7CA6BDD51E5C153A007704B9 /* UIView+SimpleMakeToast.m in Sources */,
 				7CA6BE081E5C26F9007704B9 /* PayDetailSection.m in Sources */,
@@ -2545,6 +2570,7 @@
 				7CA6BDF01E5C153A007704B9 /* PayViewModel.m in Sources */,
 				7CA6BDD41E5C153A007704B9 /* UIButton+Corner.m in Sources */,
 				7C6FE2FB1E68121D00A9F8D1 /* MyStrategyViewController.m in Sources */,
+				7CDEDBA81EAF42D00014F9BA /* STOSearchViewController.m in Sources */,
 				7CA6BE121E5C3DBA007704B9 /* OrderDetailsEntity.m in Sources */,
 				7CA6BDD91E5C153A007704B9 /* IndexViewController.m in Sources */,
 				7CA6BDEC1E5C153A007704B9 /* UserPersistance.m in Sources */,
