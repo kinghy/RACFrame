@@ -33,8 +33,20 @@ static NSString *adapterKey = @"adapterKey";
     [self.adapter addEntity:entity withSection:clss];
 }
 
+-(void)addEntity:(id)entity withSection:(Class)clss andTag:(NSString*)tag{
+    [self.adapter addEntity:entity withSection:clss andTag:tag];
+}
+
 -(void)addEntities:(NSArray*)entities withSection:(Class)clss{
     [self.adapter addEntities:entities withSection:clss];
+}
+
+-(void)replaceEntity:(id)entity withTag:(NSString *)tag{
+    [self.adapter replaceEntity:entity withTag:tag];
+}
+
+-(void)replaceWithTag:(NSString *)tag byBlock:(ReplaceBlock)block{
+    [self.adapter replaceWithTag:tag byBlock:block];
 }
 
 -(void)removeAllEntities{

@@ -12,8 +12,8 @@
 @implementation AppParam
 
 -(NSString *)getDomain{
-    NSString *url2 = @"http://192.168.6.113:8115";
-    NSString *url = @"http://192.168.6.113:8116";
+    NSString *url2 = kProductDomian;
+    NSString *url = kUserDomian;
     
     NSString* strUrl = nil;
     if ([[self getPath] hasPrefix:@"/product/"]||[[self getPath] hasPrefix:@"/public"]||[[self getPath] hasPrefix:@"/stock/"]) {

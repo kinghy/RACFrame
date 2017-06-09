@@ -26,12 +26,15 @@
 		7C23115A1E5E8D290042E742 /* NSString+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2311591E5E8D290042E742 /* NSString+Validate.m */; };
 		7C2311661E5ED7220042E742 /* DissentOrderParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2311651E5ED7220042E742 /* DissentOrderParam.m */; };
 		7C23116C1E5ED8190042E742 /* DissentOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */; };
+		7C257E6B1ED9421A00180EB5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C257E6A1ED9421A00180EB5 /* HomeViewController.m */; };
 		7C2C42521E4B0E7700BA8E21 /* libToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2C42511E4B0E7700BA8E21 /* libToast.a */; };
 		7C3BBB0A1E76271400FC3C44 /* ProfitsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BBB091E76271400FC3C44 /* ProfitsParam.m */; };
 		7C3BBB0D1E7627F300FC3C44 /* ProfitsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BBB0C1E7627F300FC3C44 /* ProfitsEntity.m */; };
 		7C4786741E727435005518D5 /* AppListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4786731E727435005518D5 /* AppListViewModel.m */; };
 		7C5AAC341E5D23A50032AC64 /* PayDissentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */; };
 		7C5AAC351E5D23A50032AC64 /* PayDissentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */; };
+		7C6D31791ED7C2FE004F01A1 /* MarketsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D31781ED7C2FE004F01A1 /* MarketsEntity.m */; };
+		7C6D317C1ED7C3E7004F01A1 /* MarketsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D317B1ED7C3E7004F01A1 /* MarketsParam.m */; };
 		7C6FE2F71E67C60300A9F8D1 /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6FE2F61E67C60300A9F8D1 /* libMJRefresh.a */; };
 		7C6FE2FB1E68121D00A9F8D1 /* MyStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FE2F91E68121C00A9F8D1 /* MyStrategyViewController.m */; };
 		7C6FE2FC1E68121D00A9F8D1 /* MyStrategyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6FE2FA1E68121C00A9F8D1 /* MyStrategyViewController.xib */; };
@@ -406,6 +409,15 @@
 		7C872BF51E49B5D100BADA96 /* user_tactic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C872A841E49B5D000BADA96 /* user_tactic@3x.png */; };
 		7C9479FD1EB178C700FFF7AD /* StockSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9479FC1EB178C700FFF7AD /* StockSection.m */; };
 		7C9479FF1EB178DA00FFF7AD /* StockSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9479FE1EB178DA00FFF7AD /* StockSection.xib */; };
+		7C9AC2661ED54F6000CCA176 /* launch@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9AC2651ED54F6000CCA176 /* launch@x2.png */; };
+		7C9AC2681ED54FE900CCA176 /* launch@x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9AC2671ED54FE900CCA176 /* launch@x3.png */; };
+		7C9AC2881ED5553300CCA176 /* HomeSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AC27C1ED5553300CCA176 /* HomeSection.m */; };
+		7C9AC2891ED5553300CCA176 /* HomeSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9AC27D1ED5553300CCA176 /* HomeSection.xib */; };
+		7C9AC28C1ED5582700CCA176 /* AdEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AC28B1ED5582700CCA176 /* AdEntity.m */; };
+		7C9AC28F1ED55C7200CCA176 /* AdvViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AC28E1ED55C7200CCA176 /* AdvViewModel.m */; };
+		7C9AC2921ED55D0B00CCA176 /* AdParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AC2911ED55D0B00CCA176 /* AdParam.m */; };
+		7C9AC2961ED580AD00CCA176 /* MyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AC2941ED580AD00CCA176 /* MyWebViewController.m */; };
+		7C9AC2971ED580AD00CCA176 /* MyWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9AC2951ED580AD00CCA176 /* MyWebViewController.xib */; };
 		7CA6BDD41E5C153A007704B9 /* UIButton+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD961E5C153A007704B9 /* UIButton+Corner.m */; };
 		7CA6BDD51E5C153A007704B9 /* UIView+SimpleMakeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD981E5C153A007704B9 /* UIView+SimpleMakeToast.m */; };
 		7CA6BDD61E5C153A007704B9 /* AppParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA6BD9D1E5C153A007704B9 /* AppParam.m */; };
@@ -461,13 +473,15 @@
 		7CC726421E6938360038A3EF /* MyStrategySection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC726401E6938360038A3EF /* MyStrategySection.xib */; };
 		7CC726461E693A5F0038A3EF /* EmptyListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC726441E693A5F0038A3EF /* EmptyListSection.m */; };
 		7CC726471E693A5F0038A3EF /* EmptyListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC726451E693A5F0038A3EF /* EmptyListSection.xib */; };
-		7CCCD3D21E5FDA6400C12D75 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D01E5FDA6400C12D75 /* HomeViewController.m */; };
 		7CCCD3D31E5FDA6400C12D75 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D11E5FDA6400C12D75 /* HomeViewController.xib */; };
 		7CCCD3D71E5FDD4D00C12D75 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D51E5FDD4D00C12D75 /* MineViewController.m */; };
 		7CCCD3D81E5FDD4D00C12D75 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD3D61E5FDD4D00C12D75 /* MineViewController.xib */; };
 		7CDEDBA81EAF42D00014F9BA /* STOSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDEDBA61EAF42D00014F9BA /* STOSearchViewController.m */; };
 		7CDEDBA91EAF42D00014F9BA /* STOSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDEDBA71EAF42D00014F9BA /* STOSearchViewController.xib */; };
 		7CDEDBAC1EAF46740014F9BA /* STOSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */; };
+		7CE1CB031ED6AAF400CCDD3B /* MarketViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1CB021ED6AAF400CCDD3B /* MarketViewModel.m */; };
+		7CE1CB061ED6AF2C00CCDD3B /* HandicapParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1CB051ED6AF2C00CCDD3B /* HandicapParam.m */; };
+		7CED08601ED6B4CF00AC1218 /* HandicapEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CED085F1ED6B4CF00AC1218 /* HandicapEntity.m */; };
 		7CFE2BBF1E320EF5000DB36F /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFE2BBE1E320EF5000DB36F /* libCocoaLumberjack.a */; };
 		7CFFE35D1E4C4437001AFD72 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFFE35C1E4C4437001AFD72 /* libSDWebImage.a */; };
 		7CFFE35F1E4C4449001AFD72 /* libOpenUDID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFFE35E1E4C4449001AFD72 /* libOpenUDID.a */; };
@@ -526,6 +540,7 @@
 		7C2311651E5ED7220042E742 /* DissentOrderParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DissentOrderParam.m; sourceTree = "<group>"; };
 		7C23116A1E5ED8190042E742 /* DissentOrderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DissentOrderEntity.h; sourceTree = "<group>"; };
 		7C23116B1E5ED8190042E742 /* DissentOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DissentOrderEntity.m; sourceTree = "<group>"; };
+		7C257E6A1ED9421A00180EB5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7C2C42511E4B0E7700BA8E21 /* libToast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libToast.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/Toast/libToast.a"; sourceTree = "<group>"; };
 		7C3BBB081E76271400FC3C44 /* ProfitsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfitsParam.h; sourceTree = "<group>"; };
 		7C3BBB091E76271400FC3C44 /* ProfitsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfitsParam.m; sourceTree = "<group>"; };
@@ -537,6 +552,10 @@
 		7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDissentViewController.m; sourceTree = "<group>"; };
 		7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayDissentViewController.xib; sourceTree = "<group>"; };
 		7C6C75EC1E5434770085947B /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "/Users/rjt/GitHub/RACFrame/Pods/../build/Debug-iphoneos/MJRefresh/libMJRefresh.a"; sourceTree = "<absolute>"; };
+		7C6D31771ED7C2FE004F01A1 /* MarketsEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketsEntity.h; sourceTree = "<group>"; };
+		7C6D31781ED7C2FE004F01A1 /* MarketsEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketsEntity.m; sourceTree = "<group>"; };
+		7C6D317A1ED7C3E7004F01A1 /* MarketsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketsParam.h; sourceTree = "<group>"; };
+		7C6D317B1ED7C3E7004F01A1 /* MarketsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketsParam.m; sourceTree = "<group>"; };
 		7C6FE2F61E67C60300A9F8D1 /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphoneos/MJRefresh/libMJRefresh.a"; sourceTree = "<group>"; };
 		7C6FE2F81E68121C00A9F8D1 /* MyStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStrategyViewController.h; sourceTree = "<group>"; };
 		7C6FE2F91E68121C00A9F8D1 /* MyStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStrategyViewController.m; sourceTree = "<group>"; };
@@ -913,6 +932,20 @@
 		7C9479FB1EB178C700FFF7AD /* StockSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockSection.h; sourceTree = "<group>"; };
 		7C9479FC1EB178C700FFF7AD /* StockSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockSection.m; sourceTree = "<group>"; };
 		7C9479FE1EB178DA00FFF7AD /* StockSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockSection.xib; sourceTree = "<group>"; };
+		7C9AC2651ED54F6000CCA176 /* launch@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@x2.png"; sourceTree = "<group>"; };
+		7C9AC2671ED54FE900CCA176 /* launch@x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@x3.png"; sourceTree = "<group>"; };
+		7C9AC27B1ED5553300CCA176 /* HomeSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSection.h; sourceTree = "<group>"; };
+		7C9AC27C1ED5553300CCA176 /* HomeSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSection.m; sourceTree = "<group>"; };
+		7C9AC27D1ED5553300CCA176 /* HomeSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSection.xib; sourceTree = "<group>"; };
+		7C9AC28A1ED5582700CCA176 /* AdEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdEntity.h; sourceTree = "<group>"; };
+		7C9AC28B1ED5582700CCA176 /* AdEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdEntity.m; sourceTree = "<group>"; };
+		7C9AC28D1ED55C7200CCA176 /* AdvViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvViewModel.h; sourceTree = "<group>"; };
+		7C9AC28E1ED55C7200CCA176 /* AdvViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvViewModel.m; sourceTree = "<group>"; };
+		7C9AC2901ED55D0B00CCA176 /* AdParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdParam.h; sourceTree = "<group>"; };
+		7C9AC2911ED55D0B00CCA176 /* AdParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdParam.m; sourceTree = "<group>"; };
+		7C9AC2931ED580AD00CCA176 /* MyWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWebViewController.h; sourceTree = "<group>"; };
+		7C9AC2941ED580AD00CCA176 /* MyWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWebViewController.m; sourceTree = "<group>"; };
+		7C9AC2951ED580AD00CCA176 /* MyWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyWebViewController.xib; sourceTree = "<group>"; };
 		7CA6BD951E5C153A007704B9 /* UIButton+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Corner.h"; sourceTree = "<group>"; };
 		7CA6BD961E5C153A007704B9 /* UIButton+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Corner.m"; sourceTree = "<group>"; };
 		7CA6BD971E5C153A007704B9 /* UIView+SimpleMakeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SimpleMakeToast.h"; sourceTree = "<group>"; };
@@ -1015,7 +1048,6 @@
 		7CC726441E693A5F0038A3EF /* EmptyListSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyListSection.m; sourceTree = "<group>"; };
 		7CC726451E693A5F0038A3EF /* EmptyListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyListSection.xib; sourceTree = "<group>"; };
 		7CCCD3CF1E5FDA6400C12D75 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		7CCCD3D01E5FDA6400C12D75 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7CCCD3D11E5FDA6400C12D75 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7CCCD3D41E5FDD4D00C12D75 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		7CCCD3D51E5FDD4D00C12D75 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
@@ -1025,6 +1057,12 @@
 		7CDEDBA71EAF42D00014F9BA /* STOSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOSearchViewController.xib; sourceTree = "<group>"; };
 		7CDEDBAA1EAF46740014F9BA /* STOSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchViewModel.h; sourceTree = "<group>"; };
 		7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchViewModel.m; sourceTree = "<group>"; };
+		7CE1CB011ED6AAF400CCDD3B /* MarketViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketViewModel.h; sourceTree = "<group>"; };
+		7CE1CB021ED6AAF400CCDD3B /* MarketViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketViewModel.m; sourceTree = "<group>"; };
+		7CE1CB041ED6AF2C00CCDD3B /* HandicapParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandicapParam.h; sourceTree = "<group>"; };
+		7CE1CB051ED6AF2C00CCDD3B /* HandicapParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandicapParam.m; sourceTree = "<group>"; };
+		7CED085E1ED6B4CF00AC1218 /* HandicapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandicapEntity.h; sourceTree = "<group>"; };
+		7CED085F1ED6B4CF00AC1218 /* HandicapEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandicapEntity.m; sourceTree = "<group>"; };
 		7CFE2BBE1E320EF5000DB36F /* libCocoaLumberjack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocoaLumberjack.a; path = "../../../Library/Developer/Xcode/DerivedData/RACFrame-dkbhmdnlitflhxgqklxqrafqmxad/Build/Products/Debug-iphonesimulator/CocoaLumberjack/libCocoaLumberjack.a"; sourceTree = "<group>"; };
 		7CFFE3581E4C42C1001AFD72 /* libOpenUDID.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenUDID.a; path = "/Users/rjt/GitHub/RACFrame/Pods/../build/Debug-iphoneos/OpenUDID/libOpenUDID.a"; sourceTree = "<absolute>"; };
 		7CFFE35A1E4C42C5001AFD72 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "/Users/rjt/GitHub/RACFrame/Pods/../build/Debug-iphoneos/SDWebImage/libSDWebImage.a"; sourceTree = "<absolute>"; };
@@ -1158,6 +1196,8 @@
 		7C8728F31E49B5D000BADA96 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7C9AC2671ED54FE900CCA176 /* launch@x3.png */,
+				7C9AC2651ED54F6000CCA176 /* launch@x2.png */,
 				7C8728F41E49B5D000BADA96 /* Image */,
 			);
 			path = Resource;
@@ -1846,6 +1886,9 @@
 		7CA6BDA31E5C153A007704B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C9AC2931ED580AD00CCA176 /* MyWebViewController.h */,
+				7C9AC2941ED580AD00CCA176 /* MyWebViewController.m */,
+				7C9AC2951ED580AD00CCA176 /* MyWebViewController.xib */,
 				7CA6BDA41E5C153A007704B9 /* IndexViewController.h */,
 				7CA6BDA51E5C153A007704B9 /* IndexViewController.m */,
 				7CA6BDA61E5C153A007704B9 /* IndexViewController.xib */,
@@ -1865,7 +1908,7 @@
 				7C5AAC321E5D23A50032AC64 /* PayDissentViewController.m */,
 				7C5AAC331E5D23A50032AC64 /* PayDissentViewController.xib */,
 				7CCCD3CF1E5FDA6400C12D75 /* HomeViewController.h */,
-				7CCCD3D01E5FDA6400C12D75 /* HomeViewController.m */,
+				7C257E6A1ED9421A00180EB5 /* HomeViewController.m */,
 				7CCCD3D11E5FDA6400C12D75 /* HomeViewController.xib */,
 				7CCCD3D41E5FDD4D00C12D75 /* MineViewController.h */,
 				7CCCD3D51E5FDD4D00C12D75 /* MineViewController.m */,
@@ -1883,6 +1926,8 @@
 		7CA6BDB01E5C153A007704B9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7C9AC28A1ED5582700CCA176 /* AdEntity.h */,
+				7C9AC28B1ED5582700CCA176 /* AdEntity.m */,
 				7CAA28791E9F13720075B9A5 /* PatchGetEntity.h */,
 				7CAA287A1E9F13720075B9A5 /* PatchGetEntity.m */,
 				7C3BBB0B1E7627F300FC3C44 /* ProfitsEntity.h */,
@@ -1905,6 +1950,10 @@
 				7CA6BDB81E5C153A007704B9 /* UserInfoEntity.m */,
 				7C0FAB8A1E656EBD00654DF2 /* SetEntity.h */,
 				7C0FAB8B1E656EBD00654DF2 /* SetEntity.m */,
+				7CED085E1ED6B4CF00AC1218 /* HandicapEntity.h */,
+				7CED085F1ED6B4CF00AC1218 /* HandicapEntity.m */,
+				7C6D31771ED7C2FE004F01A1 /* MarketsEntity.h */,
+				7C6D31781ED7C2FE004F01A1 /* MarketsEntity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1938,6 +1987,12 @@
 				7CA6BDC71E5C153A007704B9 /* VerifySecurityCodeParam.m */,
 				7CAA28761E9F12F30075B9A5 /* PatchGetParam.h */,
 				7CAA28771E9F12F30075B9A5 /* PatchGetParam.m */,
+				7C9AC2901ED55D0B00CCA176 /* AdParam.h */,
+				7C9AC2911ED55D0B00CCA176 /* AdParam.m */,
+				7CE1CB041ED6AF2C00CCDD3B /* HandicapParam.h */,
+				7CE1CB051ED6AF2C00CCDD3B /* HandicapParam.m */,
+				7C6D317A1ED7C3E7004F01A1 /* MarketsParam.h */,
+				7C6D317B1ED7C3E7004F01A1 /* MarketsParam.m */,
 			);
 			path = Param;
 			sourceTree = "<group>";
@@ -1958,6 +2013,9 @@
 		7CA6BDCB1E5C153A007704B9 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				7C9AC27B1ED5553300CCA176 /* HomeSection.h */,
+				7C9AC27C1ED5553300CCA176 /* HomeSection.m */,
+				7C9AC27D1ED5553300CCA176 /* HomeSection.xib */,
 				7CC726431E693A5F0038A3EF /* EmptyListSection.h */,
 				7CC726441E693A5F0038A3EF /* EmptyListSection.m */,
 				7CC726451E693A5F0038A3EF /* EmptyListSection.xib */,
@@ -1999,6 +2057,10 @@
 				7C0A52191E715DAF00A04F6C /* ProfitsViewModel.m */,
 				7CDEDBAA1EAF46740014F9BA /* STOSearchViewModel.h */,
 				7CDEDBAB1EAF46740014F9BA /* STOSearchViewModel.m */,
+				7C9AC28D1ED55C7200CCA176 /* AdvViewModel.h */,
+				7C9AC28E1ED55C7200CCA176 /* AdvViewModel.m */,
+				7CE1CB011ED6AAF400CCDD3B /* MarketViewModel.h */,
+				7CE1CB021ED6AAF400CCDD3B /* MarketViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2201,6 +2263,7 @@
 				7C872AD81E49B5D000BADA96 /* nav_back@3x.png in Resources */,
 				7C872AAD1E49B5D000BADA96 /* item_arrow_o@3x.png in Resources */,
 				7C872B491E49B5D100BADA96 /* myaccount@2x.png in Resources */,
+				7C9AC2661ED54F6000CCA176 /* launch@x2.png in Resources */,
 				7C872BC01E49B5D100BADA96 /* disable@2x.png in Resources */,
 				7C872BBF1E49B5D100BADA96 /* back_white@2x.png in Resources */,
 				7C872AFC1E49B5D000BADA96 /* tab_c_2@3x.png in Resources */,
@@ -2338,6 +2401,7 @@
 				7C872BA91E49B5D100BADA96 /* item_bigprevious@2x.png in Resources */,
 				7C872A9E1E49B5D000BADA96 /* icon_t1@2x.png in Resources */,
 				7C872B481E49B5D100BADA96 /* loading_against@2x.png in Resources */,
+				7C9AC2891ED5553300CCA176 /* HomeSection.xib in Resources */,
 				7C872B7A1E49B5D100BADA96 /* tab_mine_news_s@3x.png in Resources */,
 				7C872B761E49B5D100BADA96 /* tab_mine@3x.png in Resources */,
 				7C872AE51E49B5D000BADA96 /* tab_2@2x.png in Resources */,
@@ -2359,6 +2423,7 @@
 				7C872ACF1E49B5D000BADA96 /* keyboard_close@3x.png in Resources */,
 				7C872B061E49B5D000BADA96 /* user_auth@3x.png in Resources */,
 				7C872A871E49B5D000BADA96 /* btn_210_d@2x.png in Resources */,
+				7C9AC2971ED580AD00CCA176 /* MyWebViewController.xib in Resources */,
 				7C872B561E49B5D100BADA96 /* item_bearish@3x.png in Resources */,
 				7C872AC31E49B5D000BADA96 /* Keyboard-5_s@3x.png in Resources */,
 				7C872BD41E49B5D100BADA96 /* jia@2x.png in Resources */,
@@ -2421,6 +2486,7 @@
 				7C872AFE1E49B5D000BADA96 /* tab_c_3@3x.png in Resources */,
 				7C872ACC1E49B5D000BADA96 /* Keyboard-ABC_s@2x.png in Resources */,
 				7C872B6D1E49B5D100BADA96 /* tab_home_s@2x.png in Resources */,
+				7C9AC2681ED54FE900CCA176 /* launch@x3.png in Resources */,
 				7C872BA11E49B5D100BADA96 /* btn_45_s@2x.png in Resources */,
 				7C872BEE1E49B5D100BADA96 /* user_message@2x.png in Resources */,
 				7C872BE41E49B5D100BADA96 /* tab_bg@2x.png in Resources */,
@@ -2539,7 +2605,9 @@
 				7CA6BDFF1E5C23F4007704B9 /* PayDetailViewModel.m in Sources */,
 				7C122FE11E30995D009193A6 /* main.m in Sources */,
 				7C0A521A1E715DAF00A04F6C /* ProfitsViewModel.m in Sources */,
+				7C257E6B1ED9421A00180EB5 /* HomeViewController.m in Sources */,
 				7C3BBB0A1E76271400FC3C44 /* ProfitsParam.m in Sources */,
+				7C9AC2881ED5553300CCA176 /* HomeSection.m in Sources */,
 				7CA6BDD61E5C153A007704B9 /* AppParam.m in Sources */,
 				7CA6BDD81E5C153A007704B9 /* AppViewModel.m in Sources */,
 				7CA6BDE61E5C153A007704B9 /* LoginParam.m in Sources */,
@@ -2552,31 +2620,38 @@
 				7CC726461E693A5F0038A3EF /* EmptyListSection.m in Sources */,
 				7CA6BDE81E5C153A007704B9 /* SecuritycodePicParam.m in Sources */,
 				7CC7263D1E6934740038A3EF /* MyAllListParam.m in Sources */,
+				7C9AC2961ED580AD00CCA176 /* MyWebViewController.m in Sources */,
 				7CC726411E6938360038A3EF /* MyStrategySection.m in Sources */,
 				7CDEDBAC1EAF46740014F9BA /* STOSearchViewModel.m in Sources */,
+				7C6D317C1ED7C3E7004F01A1 /* MarketsParam.m in Sources */,
 				7CA6BDE91E5C153A007704B9 /* SettlementsParam.m in Sources */,
 				7C3BBB0D1E7627F300FC3C44 /* ProfitsEntity.m in Sources */,
 				7CA6BE181E5C438E007704B9 /* ServerTimeEntity.m in Sources */,
 				7CA6BDEA1E5C153A007704B9 /* UserInfoParam.m in Sources */,
+				7C6D31791ED7C2FE004F01A1 /* MarketsEntity.m in Sources */,
 				7CCCD3D71E5FDD4D00C12D75 /* MineViewController.m in Sources */,
 				7CA6BDE21E5C153A007704B9 /* LoginEntity.m in Sources */,
 				7CA6BDE11E5C153A007704B9 /* DoSettleEntity.m in Sources */,
 				7CA6BDDD1E5C153A007704B9 /* LoginViewController.m in Sources */,
 				7C9479FD1EB178C700FFF7AD /* StockSection.m in Sources */,
+				7C9AC28F1ED55C7200CCA176 /* AdvViewModel.m in Sources */,
 				7CAA287B1E9F13720075B9A5 /* PatchGetEntity.m in Sources */,
 				7CA6BDD51E5C153A007704B9 /* UIView+SimpleMakeToast.m in Sources */,
 				7CA6BE081E5C26F9007704B9 /* PayDetailSection.m in Sources */,
 				7CA6BDD71E5C153A007704B9 /* AppViewController.m in Sources */,
+				7CED08601ED6B4CF00AC1218 /* HandicapEntity.m in Sources */,
+				7CE1CB031ED6AAF400CCDD3B /* MarketViewModel.m in Sources */,
 				7CA6BDF01E5C153A007704B9 /* PayViewModel.m in Sources */,
 				7CA6BDD41E5C153A007704B9 /* UIButton+Corner.m in Sources */,
 				7C6FE2FB1E68121D00A9F8D1 /* MyStrategyViewController.m in Sources */,
 				7CDEDBA81EAF42D00014F9BA /* STOSearchViewController.m in Sources */,
 				7CA6BE121E5C3DBA007704B9 /* OrderDetailsEntity.m in Sources */,
 				7CA6BDD91E5C153A007704B9 /* IndexViewController.m in Sources */,
+				7CE1CB061ED6AF2C00CCDD3B /* HandicapParam.m in Sources */,
 				7CA6BDEC1E5C153A007704B9 /* UserPersistance.m in Sources */,
+				7C9AC28C1ED5582700CCA176 /* AdEntity.m in Sources */,
 				7C2311661E5ED7220042E742 /* DissentOrderParam.m in Sources */,
 				7CAA28921E9F5C1A0075B9A5 /* StockPersistance.m in Sources */,
-				7CCCD3D21E5FDA6400C12D75 /* HomeViewController.m in Sources */,
 				7CA6BDEF1E5C153A007704B9 /* LoginViewModel.m in Sources */,
 				7CA6BDE31E5C153A007704B9 /* SettlementsEntity.m in Sources */,
 				7CA6BE241E5C52F5007704B9 /* AppUtil.m in Sources */,
@@ -2593,6 +2668,7 @@
 				7CA6BE1E1E5C4523007704B9 /* ServerViewModel.m in Sources */,
 				7CA6BE031E5C24AB007704B9 /* PayDetailViewController.m in Sources */,
 				7CA6BDE71E5C153A007704B9 /* PreReadMassMsgParam.m in Sources */,
+				7C9AC2921ED55D0B00CCA176 /* AdParam.m in Sources */,
 				7CA6BDE41E5C153A007704B9 /* UserInfoEntity.m in Sources */,
 				7CAA28781E9F12F30075B9A5 /* PatchGetParam.m in Sources */,
 				7CAA288C1E9F51760075B9A5 /* StockPackageAspect.m in Sources */,

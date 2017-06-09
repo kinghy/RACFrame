@@ -9,5 +9,6 @@
 #import "AppViewController.h"
 
 @interface HomeViewController : AppViewController
+@property (weak, nonatomic) IBOutlet UITableView *pTable;
 
 @end

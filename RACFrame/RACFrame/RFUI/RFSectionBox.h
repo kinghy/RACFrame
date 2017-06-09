@@ -10,6 +10,7 @@
 
 @interface RFSectionBox : NSObject
 +(instancetype)boxWithEntity:(id)entity andSectionClass:(Class)sectionClss andSectionHeight:(NSInteger)height;
++(instancetype)boxWithEntity:(id)entity andSectionClass:(Class)sectionClss andSectionHeight:(NSInteger)height andTag:(NSString*)tag;
 @property (nonatomic,strong) UIView* section;
 @property (nonatomic,strong) id entity;
 
@@ -18,4 +19,5 @@
  */
 @property (nonatomic) NSInteger sectionHeight;
 @property (nonatomic,strong) Class sectionClss;
+@property (nonatomic,strong) NSString *tag;
 @end

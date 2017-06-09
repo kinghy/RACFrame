@@ -9,6 +9,17 @@
 #ifndef AppValueMacro_h
 #define AppValueMacro_h
 
+#define kMarketDomian @"http://192.168.6.66:2050"
+#define kUserDomian @"http://192.168.6.113:8115"
+#define kProductDomian @"http://192.168.6.113:8116"
+
+#define kCurrentDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define kCurrentDeciceHeight [UIScreen mainScreen].bounds.size.height
+
+#define VERSION  [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]
+#define kAppName  [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey]
+#define kAppDisplayName  [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)CFBundleDisplayName]
+
 #define kArrayLimit @"15";
 #endif /* AppValueMacro_h */
 
@@ -39,3 +50,16 @@
 #define kMyStrategySell @"5"//已平仓
 
 #define kListLimit @"10"
+
+#define kStoCodeSH @"sh.999999"
+#define kStoNameSH @"上证指数"
+
+#define kStoCodeSZ @"399001"
+#define kStoNameSZ @"深证成指"
+
+#define kStoCodeCreate @"399006"
+#define kStoNameCreate @"创业板指"
+
+#define kStoCode300 @"399300"
+#define kStoName300 @"沪深300"
+

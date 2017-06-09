@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="pTable" destination="0kz-2N-LwV" id="b0d-OL-J5H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +20,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rf-cG-9AL">
-                    <rect key="frame" x="62.5" y="0.0" width="249.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0kz-2N-LwV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="3Rf-cG-9AL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X05-iS-oG5"/>
-                <constraint firstItem="3Rf-cG-9AL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k84-jc-ccu"/>
+                <constraint firstItem="0kz-2N-LwV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FdW-jU-ZER"/>
+                <constraint firstAttribute="trailing" secondItem="0kz-2N-LwV" secondAttribute="trailing" id="GPh-EQ-rsd"/>
+                <constraint firstItem="0kz-2N-LwV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fwJ-Nd-T6o"/>
+                <constraint firstAttribute="bottom" secondItem="0kz-2N-LwV" secondAttribute="bottom" id="zQ5-eJ-ana"/>
             </constraints>
+            <point key="canvasLocation" x="-167" y="-80"/>
         </view>
     </objects>
 </document>

@@ -17,5 +17,7 @@ static const int ddLogLevel = DDLogLevelWarning;
 
 #define kRepeatInfinity -1
 
+//定义block
+typedef id (^ReplaceBlock)(id oldEntity,UIView* section);
 
 #endif /* RFMacro_h */

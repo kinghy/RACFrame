@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface RFTableAdapter : NSObject<UITableViewDataSource,UITableViewDelegate>
 +(instancetype)adapterWithTable:(UITableView*)table andController:(id<RFTableDelegate>)controller andNibArray:(NSArray<NSString *>*)nibArray;
 -(instancetype)initWithTable:(UITableView*)table andController:(id<RFTableDelegate>)controller andNibArray:(NSArray<NSString *>*)nibArray;
 
 -(void)addEntity:(id)entity withSection:(Class)clss;
+-(void)addEntity:(id)entity withSection:(Class)clss andTag:(NSString*)tag;
+
+-(void)replaceEntity:(id)entity withTag:(NSString*)tag;
+-(void)replaceWithTag:(NSString*)tag byBlock:(ReplaceBlock)block;
+
 -(void)addEntities:(NSArray*)entities withSection:(Class)clss;
 -(void)addSetEntity:(RFSetEntity*)entity;
 -(void)addSplitWithColor:(UIColor*)color andHeight:(float)height;

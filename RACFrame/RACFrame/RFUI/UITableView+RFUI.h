@@ -36,6 +36,10 @@
 @interface UITableView (RFUI)
 -(void)rftableWithController:(id<RFTableDelegate>)controller andNibArray:(NSArray<NSString *>*)nibArray;
 -(void)addEntity:(id)entity withSection:(Class)clss;
+-(void)addEntity:(id)entity withSection:(Class)clss andTag:(NSString*)tag;
+-(void)replaceEntity:(id)entity withTag:(NSString*)tag;
+-(void)replaceWithTag:(NSString *)tag byBlock:(ReplaceBlock)block;
+
 -(void)addEntities:(NSArray*)entities withSection:(Class)clss;
 -(void)addSplitWithColor:(UIColor*)color andHeight:(float)height;
 -(void)addSplitWithColor:(UIColor*)color;

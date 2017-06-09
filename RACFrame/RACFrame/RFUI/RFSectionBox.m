@@ -10,10 +10,15 @@
 
 @implementation RFSectionBox
 +(instancetype)boxWithEntity:(id)entity andSectionClass:(Class)sectionClss andSectionHeight:(NSInteger)height{
+    return  [self boxWithEntity:entity andSectionClass:sectionClss andSectionHeight:height andTag:nil];
+}
+
++(instancetype)boxWithEntity:(id)entity andSectionClass:(Class)sectionClss andSectionHeight:(NSInteger)height andTag:(NSString*)tag{
     RFSectionBox *b = [self new];
     b.sectionClss =  sectionClss;
     b.entity = entity;
     b.sectionHeight = height;
+    b.tag = tag;
     return b;
 }
 

@@ -45,12 +45,36 @@
 
 #pragma mark - public methods
 -(void)addEntity:(id)entity withSection:(Class)clss{
+    [self addEntity:entity withSection:clss andTag:nil];
+}
+
+-(void)addEntity:(id)entity withSection:(Class)clss andTag:(NSString*)tag{
     UIView* v = [self.sectionDict objectForKey:[clss description]];
     if(!v){
         v = [RFNibHelper loadNibArray:self.nibArray ofClass:clss];
         [self.sectionDict setObject:v forKey:[clss description]];
     }
-    [_records addObject:[RFSectionBox boxWithEntity:entity andSectionClass:clss andSectionHeight:v.bounds.size.height]];
+    [_records addObject:[RFSectionBox boxWithEntity:entity andSectionClass:clss andSectionHeight:v.bounds.size.height andTag:tag]];
+}
+
+-(void)replaceEntity:(id)entity withTag:(NSString *)tag{
+    for(RFSectionBox *box in _records){
+        if(box.tag && [box.tag isEqualToString:tag]){
+            box.entity = entity;
+            break;
+        }
+    }
+}
+
+-(void)replaceWithTag:(NSString *)tag byBlock:(ReplaceBlock)block{
+    for(RFSectionBox *box in _records){
+        if(box.tag && [box.tag isEqualToString:tag]){
+            if(block){
+                box.entity = block(box.entity,box.section);
+            }
+            break;
+        }
+    }
 }
 
 -(void)addEntities:(NSArray*)entities withSection:(Class)clss{
@@ -187,6 +211,7 @@
     if([self.controller respondsToSelector:@selector(rftable:selectedSection:entity:)]){
         [self.controller rftable:self.table selectedSection:box.section entity:box.entity];
     }
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
